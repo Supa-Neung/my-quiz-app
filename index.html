@@ -12,44 +12,44 @@
     <script src="questions.js"></script>
     <style>
         :root {
-			/* 🕷️ SPIDER-MAN THEME (DARK MODE) */
-			--bg-color: #0d0e12;         /* ดำถ่านหิน (Suit Base) */
-			--card-bg: #161821;         /* ดำเทาเข้ม */
-			--text-color: #ffffff;       /* ขาวสว่าง อ่านง่ายชัดเจน */
-			--text-muted: #a0a5b5;      /* เทาอ่อน */
-			--border-color: #e63946;    /* แดง Spider-Red */
-			--header-color: #ff2a42;    /* แดงสว่างสะดุดตา */
-			--card-sub-bg: #1f2230;     /* น้ำเงินดำเข้ม */
-			--nav-bg: #2a2d3d;
-			--box-shadow: 6px 6px 0px #e63946; /* เงาตัดขอบสีแดง */
+            /* 🕷️ SPIDER-MAN THEME (DARK MODE) */
+            --bg-color: #0d0e12;         /* ดำถ่านหิน (Suit Base) */
+            --card-bg: #161821;         /* ดำเทาเข้ม */
+            --text-color: #ffffff;       /* ขาวสว่าง อ่านง่ายชัดเจน */
+            --text-muted: #a0a5b5;      /* เทาอ่อน */
+            --border-color: #e63946;    /* แดง Spider-Red */
+            --header-color: #ff2a42;    /* แดงสว่างสะดุดตา */
+            --card-sub-bg: #1f2230;     /* น้ำเงินดำเข้ม */
+            --nav-bg: #2a2d3d;
+            --box-shadow: 6px 6px 0px #e63946; /* เงาตัดขอบสีแดง */
 
-			/* 🎨 สีเน้นสไตล์ Spider-Man */
-			--pixel-red: #ff2a42;       /* แดงสไปดี้ */
-			--pixel-yellow: #ffd700;    /* ทอง (Gold/Iron Spider) */
-			--pixel-cyan: #ffffff;      /* ขาวสว่าง (Web-Shooter / Eye Lenses) */
-			--pixel-green: #00f0ff;     /* ฟ้าการ์เดียน/นีออน (ตัดกับแดงลงตัวมาก) */
-			--pixel-purple: #ffd700;    /* ใช้สีทองสำหรับหัวข้ออย่าง PLAYER NAME */
-		}
+            /* 🎨 สีเน้นสไตล์ Spider-Man */
+            --pixel-red: #ff2a42;       /* แดงสไปดี้ */
+            --pixel-yellow: #ffd700;    /* ทอง (Gold/Iron Spider) */
+            --pixel-cyan: #ffffff;      /* ขาวสว่าง (Web-Shooter / Eye Lenses) */
+            --pixel-green: #00f0ff;     /* ฟ้าการ์เดียน/นีออน (ตัดกับแดงลงตัวมาก) */
+            --pixel-purple: #ffd700;    /* ใช้สีทองสำหรับหัวข้ออย่าง PLAYER NAME */
+        }
 
-		[data-theme="light"] {
-			/* 🕸️ SPIDER-MAN THEME (LIGHT MODE) */
-			--bg-color: #f4f5f8;         /* ขาวเทาอ่อน */
-			--card-bg: #ffffff;         /* ขาวบริสุทธิ์ */
-			--text-color: #0d0e12;       /* ดำสนิท อ่านง่ายมาก */
-			--text-muted: #5c6275;      /* เทาเข้ม */
-			--border-color: #0d0e12;    /* เส้นขอบสีดำ */
-			--header-color: #d62828;    /* แดงเข้ม */
-			--card-sub-bg: #f0f2f7;     /* เทาอ่อนเนียน */
-			--nav-bg: #e2e6f0;
-			--box-shadow: 6px 6px 0px #0d0e12; /* เงาสีดำ */
+        [data-theme="light"] {
+            /* 🕸️ SPIDER-MAN THEME (LIGHT MODE) */
+            --bg-color: #f4f5f8;         /* ขาวเทาอ่อน */
+            --card-bg: #ffffff;         /* ขาวบริสุทธิ์ */
+            --text-color: #0d0e12;       /* ดำสนิท อ่านง่ายมาก */
+            --text-muted: #5c6275;      /* เทาเข้ม */
+            --border-color: #0d0e12;    /* เส้นขอบสีดำ */
+            --header-color: #d62828;    /* แดงเข้ม */
+            --card-sub-bg: #f0f2f7;     /* เทาอ่อนเนียน */
+            --nav-bg: #e2e6f0;
+            --box-shadow: 6px 6px 0px #0d0e12; /* เงาสีดำ */
 
-			/* 🎨 สีเน้นสไตล์ Spider-Man สำหรับ Light Mode */
-			--pixel-red: #d62828;       /* แดงเข้ม */
-			--pixel-yellow: #b8860b;    /* ทองเข้ม (Dark Gold) อ่านบนพื้นขาวชัดเจน */
-			--pixel-cyan: #d62828;      /* ใช้สีแดงสำหรับชื่อวิชา */
-			--pixel-green: #15803d;     /* เขียวเข้ม */
-			--pixel-purple: #b8860b;    /* ทองเข้มสำหรับ PLAYER NAME */
-		}
+            /* 🎨 สีเน้นสไตล์ Spider-Man สำหรับ Light Mode */
+            --pixel-red: #d62828;       /* แดงเข้ม */
+            --pixel-yellow: #b8860b;    /* ทองเข้ม (Dark Gold) อ่านบนพื้นขาวชัดเจน */
+            --pixel-cyan: #d62828;      /* ใช้สีแดงสำหรับชื่อวิชา */
+            --pixel-green: #15803d;     /* เขียวเข้ม */
+            --pixel-purple: #b8860b;    /* ทองเข้มสำหรับ PLAYER NAME */
+        }
 
         body {
             font-family: 'Chakra Petch', sans-serif;
@@ -126,7 +126,7 @@
             font-weight: bold;
         }
 
-        /* ส่วนกรอกชื่อผู้ใช้งาน */
+        /* ส่วนกรอกชื่อผู้ใช้งาน และการตั้งค่าเกม */
         .user-name-box {
             background: var(--card-sub-bg);
             border: 4px solid var(--pixel-purple);
@@ -140,7 +140,7 @@
             margin-bottom: 8px;
             color: var(--pixel-yellow);
         }
-        .user-name-box input {
+        .user-name-box input, .user-name-box select {
             width: 100%;
             padding: 12px;
             border: 3px solid var(--border-color);
@@ -151,6 +151,13 @@
             color: var(--pixel-green);
             box-sizing: border-box;
             outline: none;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
         }
 
         .stats-grid {
@@ -244,6 +251,8 @@
             padding: 12px 20px;
             border: 3px solid var(--border-color);
             box-shadow: 4px 4px 0px #000;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .btn-back {
             background: var(--pixel-red);
@@ -258,6 +267,29 @@
         .btn-back:active {
             transform: translate(2px, 2px);
             box-shadow: 1px 1px 0px #000;
+        }
+
+        /* นาฬิกาจับเวลา 8-Bit */
+        .timer-display {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1rem;
+            background: #000;
+            color: var(--pixel-yellow);
+            padding: 8px 14px;
+            border: 2px solid var(--pixel-yellow);
+            box-shadow: 2px 2px 0px #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .timer-warning {
+            color: #ff2a42 !important;
+            border-color: #ff2a42 !important;
+            animation: pulse 0.5s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
         }
 
         .progress-container {
@@ -405,10 +437,33 @@
 
     <!-- DASHBOARD PAGE -->
     <div id="dashboard-page" class="page active-page">
-        <!-- ช่องกรอกชื่อผู้ใช้ -->
+        <!-- ช่องกรอกชื่อผู้ใช้ และตั้งค่าการเล่น -->
         <div class="user-name-box">
             <label for="student-name">🕹️ PLAYER NAME (ชื่อผู้ทดสอบ):</label>
             <input type="text" id="student-name" placeholder="INSERT NAME HERE..." />
+
+            <div class="config-grid">
+                <div>
+                    <label for="question-limit-select">🔀 QUESTIONS LIMIT (จำนวนข้อ):</label>
+                    <select id="question-limit-select">
+                        <option value="5">5 QUESTS</option>
+                        <option value="10" selected>10 QUESTS</option>
+                        <option value="15">15 QUESTS</option>
+                        <option value="20">20 QUESTS</option>
+                        <option value="ALL">ALL QUESTS (ทั้งหมด)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="timer-select">⏱️ TIMER MODE (เวลาทำข้อสอบ):</label>
+                    <select id="timer-select">
+                        <option value="0">UNLIMITED (ไม่จำกัดเวลา)</option>
+                        <option value="30">30 SECONDS / QUEST (จับเวลาต่อข้อ)</option>
+                        <option value="60">60 SECONDS / QUEST (จับเวลาต่อข้อ)</option>
+                        <option value="300">5 MINUTES TOTAL (จับเวลารวม Stage)</option>
+                        <option value="600">10 MINUTES TOTAL (จับเวลารวม Stage)</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <div class="stats-grid">
@@ -467,8 +522,13 @@
     <!-- QUIZ PAGE -->
     <div id="quiz-page" class="page">
         <div class="quiz-top-bar">
-            <button class="btn-back" onclick="showDashboard()">◄ EXIT STAGE</button>
+            <button class="btn-back" onclick="exitStage()">◄ EXIT STAGE</button>
             <h2 id="current-quiz-title" style="margin:0; font-size:1.2rem; color:var(--pixel-yellow);">STAGE...</h2>
+            
+            <!-- ส่วนแสดงนาฬิกาจับเวลา -->
+            <div id="timer-box" class="timer-display" style="display: none;">
+                ⏳ <span id="timer-label">TIME LEFT:</span> <span id="time-remaining">00:00</span>
+            </div>
         </div>
 
         <div class="progress-container">
@@ -491,7 +551,7 @@
             <div id="save-status" class="save-status" style="display:none;"></div>
 
             <button class="btn-back" style="background: var(--pixel-green); color:#000; margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="startQuiz(activeSubjectKey)">🔄 RETRY STAGE</button>
-            <button class="btn-back" style="background: var(--pixel-purple); color:#000; margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="showDashboard()">SELECT STAGE</button>
+            <button class="btn-back" style="background: var(--pixel-purple); color:#000; margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="exitStage()">SELECT STAGE</button>
         </div>
     </div>
 </div>
@@ -503,59 +563,54 @@
     let currentShuffledQuestions = [];
     let rawLeaderboardData = [];
 
+    // ตัวแปรสำหรับระบบจับเวลา
+    let timerInterval = null;
+    let timeRemaining = 0;
+    let timerModeSetting = 0; // 0 = Unlimited, 30/60 = Per Quest, 300/600 = Total Stage
+    let isTimeUp = false;
+
     window.onload = function() {
-		// ดึงชื่อผู้เล่นเก่าถ้ามี
-		//const savedName = localStorage.getItem("quiz_player_name");
-		//if (savedName) {
-		//	document.getElementById("student-name").value = savedName;
-		//}
+        applyAutoThemeByTime();
+        renderDashboard();
+        updateProgress();
+        loadLeaderboard();
+    };
 
-		// 🕷️ ตรวจสอบเวลาเพื่อเปลี่ยนธีมอัตโนมัติ (6:00 - 18:00 = Light Mode)
-		applyAutoThemeByTime();
+    function applyAutoThemeByTime() {
+        const currentHour = new Date().getHours();
+        const isDayTime = currentHour >= 6 && currentHour < 18;
 
-		renderDashboard();
-		updateProgress();
-		loadLeaderboard();
-	};
+        if (isDayTime) {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
 
-	// ฟังก์ชันเช็กเวลาแล้วเปลี่ยนธีมอัตโนมัติ
-	function applyAutoThemeByTime() {
-		const currentHour = new Date().getHours();
-		const isDayTime = currentHour >= 6 && currentHour < 18; // 6 โมงเช้า ถึง 6 โมงเย็น
+    function setTheme(themeMode) {
+        const body = document.body;
+        const themeIcon = document.getElementById("theme-icon");
+        const themeText = document.getElementById("theme-text");
 
-		if (isDayTime) {
-			setTheme('light');
-		} else {
-			setTheme('dark');
-		}
-	}
+        if (themeMode === 'light') {
+            body.setAttribute("data-theme", "light");
+            themeIcon.innerText = "☀️";
+            themeText.innerText = "LIGHT MODE";
+        } else {
+            body.removeAttribute("data-theme");
+            themeIcon.innerText = "🌙";
+            themeText.innerText = "DARK MODE";
+        }
+    }
 
-	// ฟังก์ชันกำหนดธีม และอัปเดตไอคอนปุ่ม
-	function setTheme(themeMode) {
-		const body = document.body;
-		const themeIcon = document.getElementById("theme-icon");
-		const themeText = document.getElementById("theme-text");
-
-		if (themeMode === 'light') {
-			body.setAttribute("data-theme", "light");
-			themeIcon.innerText = "☀️";
-			themeText.innerText = "LIGHT MODE";
-		} else {
-			body.removeAttribute("data-theme");
-			themeIcon.innerText = "🌙";
-			themeText.innerText = "DARK MODE";
-		}
-	}
-
-	// ฟังก์ชันกดปุ่มสลับธีมด้วยตัวเอง
-	function toggleTheme() {
-		const currentTheme = document.body.getAttribute("data-theme");
-		if (currentTheme === "light") {
-			setTheme('dark');
-		} else {
-			setTheme('light');
-		}
-	}
+    function toggleTheme() {
+        const currentTheme = document.body.getAttribute("data-theme");
+        if (currentTheme === "light") {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
 
     function shuffleArray(array) {
         let arr = [...array];
@@ -587,7 +642,7 @@
                     <div class="subject-desc">${quizData[key].desc}</div>
                 </div>
                 <div>
-                    <div class="subject-meta">🕷️ ${qCount} QUESTS</div>
+                    <div class="subject-meta">🕷️ ${qCount} QUESTS AVAILABLE</div>
                     <button class="btn-start" onclick="startQuiz('${key}')">START QUEST</button>
                 </div>
             `;
@@ -599,134 +654,207 @@
     }
 
     function startQuiz(subjectKey) {
-		const studentNameInput = document.getElementById("student-name").value.trim();
-		if (!studentNameInput) {
-			alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
-			document.getElementById("student-name").focus();
-			return;
-		}
+        const studentNameInput = document.getElementById("student-name").value.trim();
+        if (!studentNameInput) {
+            alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
+            document.getElementById("student-name").focus();
+            return;
+        }
 
-		activeSubjectKey = subjectKey;
-		const currentQuiz = quizData[subjectKey];
+        activeSubjectKey = subjectKey;
+        const currentQuiz = quizData[subjectKey];
 
-		// สุ่มเฉพาะลำดับข้อคำถาม ส่วนตัวเลือกใช้อาร์เรย์เดิมโดยไม่สลับ (ช้อยไม่สลับ)
-		currentShuffledQuestions = shuffleArray(currentQuiz.questions).map(qObj => {
-			return {
-				...qObj,
-				shuffledOptions: qObj.options
-			};
-		});
+        // 1. จัดการระบบสุ่มจำนวนข้อ (Question Limit Selector)
+        const limitVal = document.getElementById("question-limit-select").value;
+        let allQuestionsShuffled = shuffleArray(currentQuiz.questions);
+        
+        if (limitVal !== "ALL") {
+            const limitNum = parseInt(limitVal, 10);
+            allQuestionsShuffled = allQuestionsShuffled.slice(0, limitNum);
+        }
 
-		document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
-		document.getElementById("result-box").style.display = "none";
-		document.getElementById("save-status").style.display = "none";
-		document.querySelector(".submit-btn").style.display = "block";
+        currentShuffledQuestions = allQuestionsShuffled.map(qObj => {
+            return {
+                ...qObj,
+                shuffledOptions: qObj.options
+            };
+        });
 
-		const container = document.getElementById("quiz-container");
-		container.innerHTML = "";
+        document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
+        document.getElementById("result-box").style.display = "none";
+        document.getElementById("save-status").style.display = "none";
+        document.querySelector(".submit-btn").style.display = "block";
 
-		currentShuffledQuestions.forEach((qObj, index) => {
-			const card = document.createElement("div");
-			card.className = "question-card";
+        const container = document.getElementById("quiz-container");
+        container.innerHTML = "";
 
-			let optionsHtml = "";
-			const optionPrefixes = ["ก", "ข", "ค", "ง"];
+        currentShuffledQuestions.forEach((qObj, index) => {
+            const card = document.createElement("div");
+            card.className = "question-card";
 
-			qObj.shuffledOptions.forEach((opt, optIndex) => {
-				const prefix = optionPrefixes[optIndex];
-				// ตัดคำว่า ก. ข. ค. ง. ออก เหลือเฉพาะข้อความคำตอบ
-				const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
+            let optionsHtml = "";
+            const optionPrefixes = ["ก", "ข", "ค", "ง"];
 
-				optionsHtml += `
-					<label class="option-label">
-						<input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
-					</label>
-				`;
-			});
+            qObj.shuffledOptions.forEach((opt, optIndex) => {
+                const prefix = optionPrefixes[optIndex];
+                const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
 
-			card.innerHTML = `
-				<div class="question-title">Q${index + 1}: ${qObj.q}</div>
-				<div class="options-group">${optionsHtml}</div>
-				<div class="explanation" id="exp${index}"></div>
-			`;
-			container.appendChild(card);
-		});
+                optionsHtml += `
+                    <label class="option-label">
+                        <input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
+                    </label>
+                `;
+            });
 
-		document.getElementById("dashboard-page").classList.remove("active-page");
-		document.getElementById("quiz-page").classList.add("active-page");
-		updateProgress();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
+            card.innerHTML = `
+                <div class="question-title">Q${index + 1}: ${qObj.q}</div>
+                <div class="options-group">${optionsHtml}</div>
+                <div class="explanation" id="exp${index}"></div>
+            `;
+            container.appendChild(card);
+        });
 
-	function checkQuiz() {
-		let score = 0;
-		let total = currentShuffledQuestions.length;
-		let wrongCount = 0;
+        document.getElementById("dashboard-page").classList.remove("active-page");
+        document.getElementById("quiz-page").classList.add("active-page");
+        updateProgress();
 
-		currentShuffledQuestions.forEach((qObj, index) => {
-			let selected = document.querySelector(`input[name="q${index}"]:checked`);
-			let expDiv = document.getElementById(`exp${index}`);
-			
-			expDiv.style.display = "block";
-			
-			// ตัด ก. ข. ค. ง. ออกจากคำตอบที่ถูกต้องเพื่อนำมาเปรียบเทียบ
-			const cleanCorrectAns = qObj.ans.replace(/^[ก-ง]\.\s*/, '');
+        // 2. เริ่มต้นระบบจับเวลา (Timer Setup)
+        setupTimer();
 
-			if (selected) {
-				if (selected.value === cleanCorrectAns) {
-					score++;
-					expDiv.className = "explanation correct-ans";
-					expDiv.innerHTML = `<div class="exp-header">✓ CORRECT!</div>${qObj.explain}`;
-				} else {
-					wrongCount++;
-					expDiv.className = "explanation wrong-ans";
-					expDiv.innerHTML = `<div class="exp-header">✗ WRONG! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
-				}
-			} else {
-				wrongCount++;
-				expDiv.className = "explanation wrong-ans";
-				expDiv.innerHTML = `<div class="exp-header">✗ MISSED! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
-			}
-		});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-		let resultBox = document.getElementById("result-box");
-		let resultScore = document.getElementById("result-score");
-		let resultText = document.getElementById("result-text");
-		let analyticsContainer = document.getElementById("analytics-container");
+    // --- ระบบจับเวลา (Timer Logic) ---
+    function setupTimer() {
+        clearInterval(timerInterval);
+        isTimeUp = false;
+        
+        const timerSelectVal = parseInt(document.getElementById("timer-select").value, 10);
+        const timerBox = document.getElementById("timer-box");
+        const timerDisplay = document.getElementById("time-remaining");
 
-		resultBox.style.display = "block";
-		document.querySelector(".submit-btn").style.display = "none";
-		resultScore.innerHTML = `${score}/${total}`;
-		
-		let percentage = (score / total) * 100;
+        timerBox.classList.remove("timer-warning");
 
-		if (percentage >= 80) {
-			confetti({
-				particleCount: 120,
-				spread: 70,
-				origin: { y: 0.6 },
-				shapes: ['square']
-			});
-			resultText.innerHTML = "🏆 RANK S - PERFECT VICTORY!";
-		} else if (percentage >= 50) {
-			resultText.innerHTML = "👍 RANK A - STAGE CLEAR!";
-		} else {
-			resultText.innerHTML = "💀 GAME OVER - TRY AGAIN!";
-		}
+        if (timerSelectVal === 0) {
+            timerBox.style.display = "none";
+            return;
+        }
 
-		analyticsContainer.innerHTML = `
-			<b>📊 QUEST SUMMARY:</b><br>
-			• ACCURACY: <span style="color:var(--pixel-green); font-weight:bold;">${percentage.toFixed(0)}%</span> (${score} Correct)<br>
-			• MISSED: <span style="color:var(--pixel-red); font-weight:bold;">${wrongCount} Quests</span><br>
-			<i>💡 SCROLL UP TO REVIEW YOUR ANSWERS</i>
-		`;
+        timerBox.style.display = "flex";
 
-		const userName = document.getElementById("student-name").value.trim() || "PLAYER 1";
-		const categoryName = quizData[activeSubjectKey].title;
-		sendQuizResult(userName, categoryName, score, total);
+        if (timerSelectVal === 30 || timerSelectVal === 60) {
+            // จับเวลาต่อข้อ -> เวลาตั้งต้น = วินาทีต่อข้อ * จำนวนข้อที่เล่น
+            timeRemaining = timerSelectVal * currentShuffledQuestions.length;
+            document.getElementById("timer-label").innerText = "TIME LEFT:";
+        } else {
+            // จับเวลารวมทั้ง Stage
+            timeRemaining = timerSelectVal;
+            document.getElementById("timer-label").innerText = "STAGE TIME:";
+        }
 
-		window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-	}
+        updateTimerDisplay();
+
+        timerInterval = setInterval(() => {
+            timeRemaining--;
+            updateTimerDisplay();
+
+            if (timeRemaining <= 10) {
+                timerBox.classList.add("timer-warning");
+            }
+
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                isTimeUp = true;
+                alert("⏰ TIME OVER! หมดเวลาทำแบบทดสอบ ระบบจะส่งคำตอบให้อัตโนมัติ");
+                checkQuiz();
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        document.getElementById("time-remaining").innerText = 
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function exitStage() {
+        clearInterval(timerInterval);
+        showDashboard();
+    }
+
+    function checkQuiz() {
+        // หยุดนาฬิกาจับเวลาทันทีที่ส่งคำตอบ
+        clearInterval(timerInterval);
+
+        let score = 0;
+        let total = currentShuffledQuestions.length;
+        let wrongCount = 0;
+
+        currentShuffledQuestions.forEach((qObj, index) => {
+            let selected = document.querySelector(`input[name="q${index}"]:checked`);
+            let expDiv = document.getElementById(`exp${index}`);
+            
+            expDiv.style.display = "block";
+            
+            const cleanCorrectAns = qObj.ans.replace(/^[ก-ง]\.\s*/, '');
+
+            if (selected) {
+                if (selected.value === cleanCorrectAns) {
+                    score++;
+                    expDiv.className = "explanation correct-ans";
+                    expDiv.innerHTML = `<div class="exp-header">✓ CORRECT!</div>${qObj.explain}`;
+                } else {
+                    wrongCount++;
+                    expDiv.className = "explanation wrong-ans";
+                    expDiv.innerHTML = `<div class="exp-header">✗ WRONG! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+                }
+            } else {
+                wrongCount++;
+                expDiv.className = "explanation wrong-ans";
+                expDiv.innerHTML = `<div class="exp-header">✗ MISSED! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+            }
+        });
+
+        let resultBox = document.getElementById("result-box");
+        let resultScore = document.getElementById("result-score");
+        let resultText = document.getElementById("result-text");
+        let analyticsContainer = document.getElementById("analytics-container");
+
+        resultBox.style.display = "block";
+        document.querySelector(".submit-btn").style.display = "none";
+        resultScore.innerHTML = `${score}/${total}`;
+        
+        let percentage = (score / total) * 100;
+
+        if (percentage >= 80) {
+            confetti({
+                particleCount: 120,
+                spread: 70,
+                origin: { y: 0.6 },
+                shapes: ['square']
+            });
+            resultText.innerHTML = "🏆 RANK S - PERFECT VICTORY!";
+        } else if (percentage >= 50) {
+            resultText.innerHTML = "👍 RANK A - STAGE CLEAR!";
+        } else {
+            resultText.innerHTML = "💀 GAME OVER - TRY AGAIN!";
+        }
+
+        analyticsContainer.innerHTML = `
+            <b>📊 QUEST SUMMARY:</b><br>
+            • ACCURACY: <span style="color:var(--pixel-green); font-weight:bold;">${percentage.toFixed(0)}%</span> (${score} Correct)<br>
+            • MISSED: <span style="color:var(--pixel-red); font-weight:bold;">${wrongCount} Quests</span><br>
+            ${isTimeUp ? '• <span style="color:var(--pixel-red); font-weight:bold;">⏱️ STAGE ENDED BY TIMEOUT</span><br>' : ''}
+            <i>💡 SCROLL UP TO REVIEW YOUR ANSWERS</i>
+        `;
+
+        const userName = document.getElementById("student-name").value.trim() || "PLAYER 1";
+        const categoryName = quizData[activeSubjectKey].title;
+        sendQuizResult(userName, categoryName, score, total);
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
 
     function updateProgress() {
         if (!currentShuffledQuestions.length) return;
