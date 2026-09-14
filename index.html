@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👾 8-BIT QUIZ ACADEMY 👾</title>
+    <title>🎮 8-BIT QUIZ ACADEMY 🕸️</title>
     <!-- Google Fonts: Press Start 2P & Chakra Petch for 8-Bit Feel -->
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Press+Start+2P&display=map" rel="stylesheet">
     <!-- Canvas Confetti Library -->
@@ -12,39 +12,43 @@
     <script src="questions.js"></script>
     <style>
         :root {
-            --bg-color: #2b2b36;
-            --card-bg: #181825;
-            --text-color: #f8f8f2;
-            --text-muted: #9595b2;
-            --border-color: #ffffff;
-            --header-color: #ff79c6;
-            --card-sub-bg: #212130;
-            --nav-bg: #313145;
-            --pixel-green: #50fa7b;
-            --pixel-yellow: #f1fa8c;
-            --pixel-cyan: #8be9fd;
-            --pixel-red: #ff5555;
-            --pixel-purple: #bd93f9;
-            --box-shadow: 6px 6px 0px #000000;
-        }
+			/* 🕷️ SPIDER-MAN THEME (DARK MODE) */
+			--bg-color: #0d0e12;         /* ดำถ่านหิน (Suit Base) */
+			--card-bg: #161821;         /* ดำเทาเข้ม */
+			--text-color: #ffffff;       /* ขาวสว่าง อ่านง่ายชัดเจน */
+			--text-muted: #a0a5b5;      /* เทาอ่อน */
+			--border-color: #e63946;    /* แดง Spider-Red */
+			--header-color: #ff2a42;    /* แดงสว่างสะดุดตา */
+			--card-sub-bg: #1f2230;     /* น้ำเงินดำเข้ม */
+			--nav-bg: #2a2d3d;
+			--box-shadow: 6px 6px 0px #e63946; /* เงาตัดขอบสีแดง */
 
-        [data-theme="light"] {
-			--bg-color: #eef2f7;
-			--card-bg: #ffffff;
-			--text-color: #1a1a2e;
-			--text-muted: #555566;
-			--border-color: #000000;
-			--header-color: #8b5cf6;
-			--card-sub-bg: #f8fafc;
-			--nav-bg: #cbd5e1;
-			--box-shadow: 6px 6px 0px #000000;
+			/* 🎨 สีเน้นสไตล์ Spider-Man */
+			--pixel-red: #ff2a42;       /* แดงสไปดี้ */
+			--pixel-yellow: #ffd700;    /* ทอง (Gold/Iron Spider) */
+			--pixel-cyan: #ffffff;      /* ขาวสว่าง (Web-Shooter / Eye Lenses) */
+			--pixel-green: #00f0ff;     /* ฟ้าการ์เดียน/นีออน (ตัดกับแดงลงตัวมาก) */
+			--pixel-purple: #ffd700;    /* ใช้สีทองสำหรับหัวข้ออย่าง PLAYER NAME */
+		}
 
-			/* 🎨 ปรับแก้สีเน้น (Pixel Colors) ให้เข้มชัดขึ้นสำหรับ Light Mode */
-			--pixel-green: #059669;  /* จากสีเขียวสว่าง เปลี่ยนเป็นเขียวเข้มอ่านง่าย */
-			--pixel-yellow: #d97706; /* จากสีเหลืองอ่อน เปลี่ยนเป็นสีส้มทองเข้ม */
-			--pixel-cyan: #0284c7;   /* จากสีฟ้าอ่อน เปลี่ยนเป็นสีน้ำเงินฟ้าเข้ม (แก้ปัญหาชื่อวิชาจาง) */
-			--pixel-red: #dc2626;    /* แดงเข้ม */
-			--pixel-purple: #7c3aed; /* ม่วงเข้ม (แก้ปัญหาข้อความ PLAYER NAME จาง) */
+		[data-theme="light"] {
+			/* 🕸️ SPIDER-MAN THEME (LIGHT MODE) */
+			--bg-color: #f4f5f8;         /* ขาวเทาอ่อน */
+			--card-bg: #ffffff;         /* ขาวบริสุทธิ์ */
+			--text-color: #0d0e12;       /* ดำสนิท อ่านง่ายมาก */
+			--text-muted: #5c6275;      /* เทาเข้ม */
+			--border-color: #0d0e12;    /* เส้นขอบสีดำ */
+			--header-color: #d62828;    /* แดงเข้ม */
+			--card-sub-bg: #f0f2f7;     /* เทาอ่อนเนียน */
+			--nav-bg: #e2e6f0;
+			--box-shadow: 6px 6px 0px #0d0e12; /* เงาสีดำ */
+
+			/* 🎨 สีเน้นสไตล์ Spider-Man สำหรับ Light Mode */
+			--pixel-red: #d62828;       /* แดงเข้ม */
+			--pixel-yellow: #b8860b;    /* ทองเข้ม (Dark Gold) อ่านบนพื้นขาวชัดเจน */
+			--pixel-cyan: #d62828;      /* ใช้สีแดงสำหรับชื่อวิชา */
+			--pixel-green: #15803d;     /* เขียวเข้ม */
+			--pixel-purple: #b8860b;    /* ทองเข้มสำหรับ PLAYER NAME */
 		}
 
         body {
@@ -395,7 +399,7 @@
     </button>
 
     <div class="main-header">
-        <h1 class="pixel-font">🎮 8-BIT QUIZ ONLINE 👾</h1>
+        <h1 class="pixel-font">🎮 8-BIT QUIZ 👾</h1>
         <p class="blink"> >> คลังแบบทดสอบออนไลน์ สุ่มโจทย์คำถาม พร้อมระบบจัดอันดับ Guild Leaderboard << </p>
     </div>
 
@@ -422,7 +426,7 @@
             </div>
         </div>
 
-        <div class="section-title">👾 SELECT STAGE (เลือกวิชา)</div>
+        <div class="section-title">🕸️ SELECT STAGE (เลือกวิชา)</div>
         <div class="subjects-grid" id="subjects-grid"></div>
 
         <!-- กล่องแสดง Leaderboard / อันดับคะแนน -->
@@ -551,7 +555,7 @@
                     <div class="subject-desc">${quizData[key].desc}</div>
                 </div>
                 <div>
-                    <div class="subject-meta">👾 ${qCount} QUESTS</div>
+                    <div class="subject-meta">🕷️ ${qCount} QUESTS</div>
                     <button class="btn-start" onclick="startQuiz('${key}')">START QUEST</button>
                 </div>
             `;
