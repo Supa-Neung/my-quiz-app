@@ -504,26 +504,58 @@
     let rawLeaderboardData = [];
 
     window.onload = function() {
-        renderDashboard();
-        updateProgress();
-        loadLeaderboard();
-    };
+		// ดึงชื่อผู้เล่นเก่าถ้ามี
+		//const savedName = localStorage.getItem("quiz_player_name");
+		//if (savedName) {
+		//	document.getElementById("student-name").value = savedName;
+		//}
 
-    function toggleTheme() {
-        const body = document.body;
-        const themeIcon = document.getElementById("theme-icon");
-        const themeText = document.getElementById("theme-text");
+		// 🕷️ ตรวจสอบเวลาเพื่อเปลี่ยนธีมอัตโนมัติ (6:00 - 18:00 = Light Mode)
+		applyAutoThemeByTime();
 
-        if (body.getAttribute("data-theme") === "light") {
-            body.removeAttribute("data-theme");
-            themeIcon.innerText = "🌙";
-            themeText.innerText = "LIGHT MODE";
-        } else {
-            body.setAttribute("data-theme", "light");
-            themeIcon.innerText = "☀️";
-            themeText.innerText = "DARK MODE";
-        }
-    }
+		renderDashboard();
+		updateProgress();
+		loadLeaderboard();
+	};
+
+	// ฟังก์ชันเช็กเวลาแล้วเปลี่ยนธีมอัตโนมัติ
+	function applyAutoThemeByTime() {
+		const currentHour = new Date().getHours();
+		const isDayTime = currentHour >= 6 && currentHour < 18; // 6 โมงเช้า ถึง 6 โมงเย็น
+
+		if (isDayTime) {
+			setTheme('light');
+		} else {
+			setTheme('dark');
+		}
+	}
+
+	// ฟังก์ชันกำหนดธีม และอัปเดตไอคอนปุ่ม
+	function setTheme(themeMode) {
+		const body = document.body;
+		const themeIcon = document.getElementById("theme-icon");
+		const themeText = document.getElementById("theme-text");
+
+		if (themeMode === 'light') {
+			body.setAttribute("data-theme", "light");
+			themeIcon.innerText = "☀️";
+			themeText.innerText = "LIGHT MODE";
+		} else {
+			body.removeAttribute("data-theme");
+			themeIcon.innerText = "🌙";
+			themeText.innerText = "DARK MODE";
+		}
+	}
+
+	// ฟังก์ชันกดปุ่มสลับธีมด้วยตัวเอง
+	function toggleTheme() {
+		const currentTheme = document.body.getAttribute("data-theme");
+		if (currentTheme === "light") {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
+	}
 
     function shuffleArray(array) {
         let arr = [...array];
