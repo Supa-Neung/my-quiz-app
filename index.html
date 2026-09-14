@@ -389,7 +389,7 @@
 
     <div class="main-header">
         <h1 class="pixel-font">🎮 8-BIT QUIZ ONLINE 👾</h1>
-        <p class="blink">>>> PRESS START TO BEGIN QUIZ <<<</p>
+        <p class="blink"> >> คลังแบบทดสอบออนไลน์ สุ่มโจทย์คำถาม พร้อมระบบจัดอันดับ Guild Leaderboard << </p>
     </div>
 
     <!-- DASHBOARD PAGE -->
@@ -556,60 +556,133 @@
     }
 
     function startQuiz(subjectKey) {
-        const studentNameInput = document.getElementById("student-name").value.trim();
-        if (!studentNameInput) {
-            alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
-            document.getElementById("student-name").focus();
-            return;
-        }
+		const studentNameInput = document.getElementById("student-name").value.trim();
+		if (!studentNameInput) {
+			alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
+			document.getElementById("student-name").focus();
+			return;
+		}
 
-        activeSubjectKey = subjectKey;
-        const currentQuiz = quizData[subjectKey];
+		activeSubjectKey = subjectKey;
+		const currentQuiz = quizData[subjectKey];
 
-        currentShuffledQuestions = shuffleArray(currentQuiz.questions).map(qObj => {
-            return {
-                ...qObj,
-                shuffledOptions: shuffleArray(qObj.options)
-            };
-        });
+		currentShuffledQuestions = shuffleArray(currentQuiz.questions).map(qObj => {
+			return {
+				...qObj,
+				shuffledOptions: shuffleArray(qObj.options)
+			};
+		});
 
-        document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
-        document.getElementById("result-box").style.display = "none";
-        document.getElementById("save-status").style.display = "none";
-        document.querySelector(".submit-btn").style.display = "block";
+		document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
+		document.getElementById("result-box").style.display = "none";
+		document.getElementById("save-status").style.display = "none";
+		document.querySelector(".submit-btn").style.display = "block";
 
-        const container = document.getElementById("quiz-container");
-        container.innerHTML = "";
+		const container = document.getElementById("quiz-container");
+		container.innerHTML = "";
 
-        currentShuffledQuestions.forEach((qObj, index) => {
-            const card = document.createElement("div");
-            card.className = "question-card";
+		currentShuffledQuestions.forEach((qObj, index) => {
+			const card = document.createElement("div");
+			card.className = "question-card";
 
-            let optionsHtml = "";
-            const optionPrefixes = ["ก", "ข", "ค", "ง"];
+			let optionsHtml = "";
+			const optionPrefixes = ["ก", "ข", "ค", "ง"];
 
-            qObj.shuffledOptions.forEach((opt, optIndex) => {
-                const prefix = optionPrefixes[optIndex];
-                optionsHtml += `
-                    <label class="option-label">
-                        <input type="radio" name="q${index}" value="${opt}" onchange="updateProgress()"> ${prefix}. ${opt.replace(/^[ก-ง]\.\s*/, '')}
-                    </label>
-                `;
-            });
+			qObj.shuffledOptions.forEach((opt, optIndex) => {
+				const prefix = optionPrefixes[optIndex];
+				// ตัดคำว่า ก. ข. ค. ง. ออก เหลือเฉพาะข้อความคำตอบ
+				const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
 
-            card.innerHTML = `
-                <div class="question-title">Q${index + 1}: ${qObj.q}</div>
-                <div class="options-group">${optionsHtml}</div>
-                <div class="explanation" id="exp${index}"></div>
-            `;
-            container.appendChild(card);
-        });
+				optionsHtml += `
+					<label class="option-label">
+						<input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
+					</label>
+				`;
+			});
 
-        document.getElementById("dashboard-page").classList.remove("active-page");
-        document.getElementById("quiz-page").classList.add("active-page");
-        updateProgress();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+			card.innerHTML = `
+				<div class="question-title">Q${index + 1}: ${qObj.q}</div>
+				<div class="options-group">${optionsHtml}</div>
+				<div class="explanation" id="exp${index}"></div>
+			`;
+			container.appendChild(card);
+		});
+
+		document.getElementById("dashboard-page").classList.remove("active-page");
+		document.getElementById("quiz-page").classList.add("active-page");
+		updateProgress();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	function checkQuiz() {
+		let score = 0;
+		let total = currentShuffledQuestions.length;
+		let wrongCount = 0;
+
+		currentShuffledQuestions.forEach((qObj, index) => {
+			let selected = document.querySelector(`input[name="q${index}"]:checked`);
+			let expDiv = document.getElementById(`exp${index}`);
+			
+			expDiv.style.display = "block";
+			
+			// ตัด ก. ข. ค. ง. ออกจากคำตอบที่ถูกต้องเพื่อนำมาเปรียบเทียบ
+			const cleanCorrectAns = qObj.ans.replace(/^[ก-ง]\.\s*/, '');
+
+			if (selected) {
+				if (selected.value === cleanCorrectAns) {
+					score++;
+					expDiv.className = "explanation correct-ans";
+					expDiv.innerHTML = `<div class="exp-header">✓ CORRECT!</div>${qObj.explain}`;
+				} else {
+					wrongCount++;
+					expDiv.className = "explanation wrong-ans";
+					expDiv.innerHTML = `<div class="exp-header">✗ WRONG! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+				}
+			} else {
+				wrongCount++;
+				expDiv.className = "explanation wrong-ans";
+				expDiv.innerHTML = `<div class="exp-header">✗ MISSED! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+			}
+		});
+
+		let resultBox = document.getElementById("result-box");
+		let resultScore = document.getElementById("result-score");
+		let resultText = document.getElementById("result-text");
+		let analyticsContainer = document.getElementById("analytics-container");
+
+		resultBox.style.display = "block";
+		document.querySelector(".submit-btn").style.display = "none";
+		resultScore.innerHTML = `${score}/${total}`;
+		
+		let percentage = (score / total) * 100;
+
+		if (percentage >= 80) {
+			confetti({
+				particleCount: 120,
+				spread: 70,
+				origin: { y: 0.6 },
+				shapes: ['square']
+			});
+			resultText.innerHTML = "🏆 RANK S - PERFECT VICTORY!";
+		} else if (percentage >= 50) {
+			resultText.innerHTML = "👍 RANK A - STAGE CLEAR!";
+		} else {
+			resultText.innerHTML = "💀 GAME OVER - TRY AGAIN!";
+		}
+
+		analyticsContainer.innerHTML = `
+			<b>📊 QUEST SUMMARY:</b><br>
+			• ACCURACY: <span style="color:var(--pixel-green); font-weight:bold;">${percentage.toFixed(0)}%</span> (${score} Correct)<br>
+			• MISSED: <span style="color:var(--pixel-red); font-weight:bold;">${wrongCount} Quests</span><br>
+			<i>💡 SCROLL UP TO REVIEW YOUR ANSWERS</i>
+		`;
+
+		const userName = document.getElementById("student-name").value.trim() || "PLAYER 1";
+		const categoryName = quizData[activeSubjectKey].title;
+		sendQuizResult(userName, categoryName, score, total);
+
+		window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+	}
 
     function updateProgress() {
         if (!currentShuffledQuestions.length) return;
@@ -628,74 +701,6 @@
         document.getElementById("quiz-page").classList.remove("active-page");
         document.getElementById("dashboard-page").classList.add("active-page");
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function checkQuiz() {
-        let score = 0;
-        let total = currentShuffledQuestions.length;
-        let wrongCount = 0;
-
-        currentShuffledQuestions.forEach((qObj, index) => {
-            let selected = document.querySelector(`input[name="q${index}"]:checked`);
-            let expDiv = document.getElementById(`exp${index}`);
-            
-            expDiv.style.display = "block";
-            
-            if (selected) {
-                if (selected.value === qObj.ans) {
-                    score++;
-                    expDiv.className = "explanation correct-ans";
-                    expDiv.innerHTML = `<div class="exp-header">✓ CORRECT!</div>${qObj.explain}`;
-                } else {
-                    wrongCount++;
-                    expDiv.className = "explanation wrong-ans";
-                    expDiv.innerHTML = `<div class="exp-header">✗ WRONG! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
-                }
-            } else {
-                wrongCount++;
-                expDiv.className = "explanation wrong-ans";
-                expDiv.innerHTML = `<div class="exp-header">✗ MISSED! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
-            }
-        });
-
-        let resultBox = document.getElementById("result-box");
-        let resultScore = document.getElementById("result-score");
-        let resultText = document.getElementById("result-text");
-        let analyticsContainer = document.getElementById("analytics-container");
-
-        resultBox.style.display = "block";
-        document.querySelector(".submit-btn").style.display = "none";
-        resultScore.innerHTML = `${score}/${total}`;
-        
-        let percentage = (score / total) * 100;
-
-        // 8-Bit Confetti Shapes
-        if (percentage >= 80) {
-            confetti({
-                particleCount: 120,
-                spread: 70,
-                origin: { y: 0.6 },
-                shapes: ['square'] // สี่เหลี่ยมแบบพิกเซล
-            });
-            resultText.innerHTML = "🏆 RANK S - PERFECT VICTORY!";
-        } else if (percentage >= 50) {
-            resultText.innerHTML = "👍 RANK A - STAGE CLEAR!";
-        } else {
-            resultText.innerHTML = "💀 GAME OVER - TRY AGAIN!";
-        }
-
-        analyticsContainer.innerHTML = `
-            <b>📊 QUEST SUMMARY:</b><br>
-            • ACCURACY: <span style="color:var(--pixel-green); font-weight:bold;">${percentage.toFixed(0)}%</span> (${score} Correct)<br>
-            • MISSED: <span style="color:var(--pixel-red); font-weight:bold;">${wrongCount} Quests</span><br>
-            <i>💡 SCROLL UP TO REVIEW YOUR ANSWERS</i>
-        `;
-
-        const userName = document.getElementById("student-name").value.trim() || "PLAYER 1";
-        const categoryName = quizData[activeSubjectKey].title;
-        sendQuizResult(userName, categoryName, score, total);
-
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
     function sendQuizResult(userName, categoryName, score, total) {
