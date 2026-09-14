@@ -566,10 +566,11 @@
 		activeSubjectKey = subjectKey;
 		const currentQuiz = quizData[subjectKey];
 
+		// สุ่มเฉพาะลำดับข้อคำถาม ส่วนตัวเลือกใช้อาร์เรย์เดิมโดยไม่สลับ (ช้อยไม่สลับ)
 		currentShuffledQuestions = shuffleArray(currentQuiz.questions).map(qObj => {
 			return {
 				...qObj,
-				shuffledOptions: shuffleArray(qObj.options)
+				shuffledOptions: qObj.options
 			};
 		});
 
