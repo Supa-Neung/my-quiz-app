@@ -3,62 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ แบบทดสอบออนไลน์ ✨</title>
-    <!-- Google Fonts: Kanit -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>🎮 8-BIT QUIZ ACADEMY 🕸️</title>
+    <!-- Google Fonts: Press Start 2P & Chakra Petch for 8-Bit Feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Press+Start+2P&display=map" rel="stylesheet">
     <!-- Canvas Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <!-- ไฟล์เก็บข้อมูลข้อสอบ -->
     <script src="questions.js"></script>
     <style>
         :root {
-            --bg-color: #f7f3ff;
-            --card-bg: #ffffff;
-            --text-color: #4a4e69;
-            --text-muted: #8d99ae;
-            --border-color: #e0d6f6;
-            --header-color: #6c5ce7;
-            --card-sub-bg: #faf7ff;
-            --nav-bg: #f0e6ff;
-            --accent-pink: #ff7675;
-            --accent-blue: #74b9ff;
-            --accent-purple: #a29bfe;
-            --accent-yellow: #ffeaa7;
-            --shadow: 0 8px 20px rgba(108, 92, 231, 0.12);
+            /* 🕷️ SPIDER-MAN THEME (DARK MODE) */
+            --bg-color: #0d0e12;         /* ดำถ่านหิน (Suit Base) */
+            --card-bg: #161821;         /* ดำเทาเข้ม */
+            --text-color: #ffffff;       /* ขาวสว่าง อ่านง่ายชัดเจน */
+            --text-muted: #a0a5b5;      /* เทาอ่อน */
+            --border-color: #e63946;    /* แดง Spider-Red */
+            --header-color: #ff2a42;    /* แดงสว่างสะดุดตา */
+            --card-sub-bg: #1f2230;     /* น้ำเงินดำเข้ม */
+            --nav-bg: #2a2d3d;
+            --box-shadow: 6px 6px 0px #e63946; /* เงาตัดขอบสีแดง */
+
+            /* 🎨 สีเน้นสไตล์ Spider-Man */
+            --pixel-red: #ff2a42;       /* แดงสไปดี้ */
+            --pixel-yellow: #ffd700;    /* ทอง (Gold/Iron Spider) */
+            --pixel-cyan: #ffffff;      /* ขาวสว่าง (Web-Shooter / Eye Lenses) */
+            --pixel-green: #00f0ff;     /* ฟ้าการ์เดียน/นีออน (ตัดกับแดงลงตัวมาก) */
+            --pixel-purple: #ffd700;    /* ใช้สีทองสำหรับหัวข้ออย่าง PLAYER NAME */
         }
 
-        [data-theme="dark"] {
-            --bg-color: #1a1829;
-            --card-bg: #242238;
-            --text-color: #f1f2f6;
-            --text-muted: #a4b0be;
-            --border-color: #3b375a;
-            --header-color: #a29bfe;
-            --card-sub-bg: #2d2a45;
-            --nav-bg: #2c2847;
-            --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        [data-theme="light"] {
+            /* 🕸️ SPIDER-MAN THEME (LIGHT MODE) */
+            --bg-color: #f4f5f8;         /* ขาวเทาอ่อน */
+            --card-bg: #ffffff;         /* ขาวบริสุทธิ์ */
+            --text-color: #0d0e12;       /* ดำสนิท อ่านง่ายมาก */
+            --text-muted: #5c6275;      /* เทาเข้ม */
+            --border-color: #0d0e12;    /* เส้นขอบสีดำ */
+            --header-color: #d62828;    /* แดงเข้ม */
+            --card-sub-bg: #f0f2f7;     /* เทาอ่อนเนียน */
+            --nav-bg: #e2e6f0;
+            --box-shadow: 6px 6px 0px #0d0e12; /* เงาสีดำ */
+
+            /* 🎨 สีเน้นสไตล์ Spider-Man สำหรับ Light Mode */
+            --pixel-red: #d62828;       /* แดงเข้ม */
+            --pixel-yellow: #b8860b;    /* ทองเข้ม (Dark Gold) อ่านบนพื้นขาวชัดเจน */
+            --pixel-cyan: #d62828;      /* ใช้สีแดงสำหรับชื่อวิชา */
+            --pixel-green: #15803d;     /* เขียวเข้ม */
+            --pixel-purple: #b8860b;    /* ทองเข้มสำหรับ PLAYER NAME */
         }
 
         body {
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Chakra Petch', sans-serif;
             background-color: var(--bg-color);
-            background-image: radial-gradient(var(--border-color) 1px, transparent 0);
-            background-size: 24px 24px;
+            background-image: linear-gradient(0deg, rgba(0,0,0,0.1) 50%, transparent 50%);
+            background-size: 100% 4px; /* Scanline effect */
             margin: 0;
             padding: 20px;
             color: var(--text-color);
-            transition: all 0.3s ease;
+            transition: all 0.2s;
+        }
+
+        .pixel-font {
+            font-family: 'Press Start 2P', 'Chakra Petch', cursive;
         }
 
         .container {
-            max-width: 920px;
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 30px;
-            border-radius: 24px;
-            box-shadow: var(--shadow);
+            border: 4px solid var(--border-color);
+            box-shadow: var(--box-shadow);
             position: relative;
-            border: 3px solid var(--border-color);
         }
         
         .theme-toggle {
@@ -66,77 +81,83 @@
             top: 25px;
             right: 25px;
             background: var(--nav-bg);
-            border: 2px solid var(--accent-purple);
-            color: var(--header-color);
-            padding: 8px 16px;
-            border-radius: 30px;
+            border: 3px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 14px;
             cursor: pointer;
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-weight: bold;
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: transform 0.2s ease;
+            box-shadow: 3px 3px 0px #000;
         }
-        .theme-toggle:hover {
-            transform: scale(1.05);
+        .theme-toggle:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px 0px #000;
         }
 
         .page { display: none; }
-        .active-page { display: block; animation: fadeIn 0.4s ease-in-out; }
+        .active-page { display: block; animation: pixelFade 0.2s steps(4); }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes pixelFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .main-header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px dashed var(--border-color);
+            border-bottom: 4px dashed var(--border-color);
             padding-bottom: 20px;
         }
         .main-header h1 {
             color: var(--header-color);
-            margin: 0 0 10px 0;
-            font-size: 2.3rem;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+            margin: 0 0 15px 0;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #000;
         }
         .main-header p {
-            color: var(--text-muted);
+            color: var(--pixel-cyan);
             margin: 0;
             font-size: 1.1rem;
+            font-weight: bold;
         }
 
-        /* ส่วนกรอกชื่อผู้ใช้งาน */
+        /* ส่วนกรอกชื่อผู้ใช้งาน และการตั้งค่าเกม */
         .user-name-box {
             background: var(--card-sub-bg);
-            border: 2px solid var(--accent-purple);
+            border: 4px solid var(--pixel-purple);
             padding: 20px;
-            border-radius: 18px;
             margin-bottom: 25px;
+            box-shadow: 4px 4px 0px #000;
         }
         .user-name-box label {
             font-weight: bold;
             display: block;
             margin-bottom: 8px;
-            color: var(--header-color);
+            color: var(--pixel-yellow);
         }
-        .user-name-box input {
+        .user-name-box input, .user-name-box select {
             width: 100%;
-            padding: 12px 16px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            font-family: 'Kanit', sans-serif;
-            font-size: 1rem;
+            padding: 12px;
+            border: 3px solid var(--border-color);
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
             background: var(--card-bg);
-            color: var(--text-color);
+            color: var(--pixel-green);
             box-sizing: border-box;
             outline: none;
-            transition: border-color 0.2s;
         }
-        .user-name-box input:focus {
-            border-color: var(--accent-purple);
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
         }
 
         .stats-grid {
@@ -146,26 +167,28 @@
             margin-bottom: 30px;
         }
         .stat-card {
-            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
-            color: white;
-            padding: 20px;
-            border-radius: 18px;
+            background: var(--pixel-purple);
+            color: #000;
+            padding: 15px;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0px #000;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+            font-weight: bold;
         }
-        .stat-card.green { background: linear-gradient(135deg, #55efc4, #00b894); color: #1e3799; }
-        .stat-card.purple { background: linear-gradient(135deg, #fd79a8, #e84393); }
-        .stat-number { font-size: 2.2rem; font-weight: bold; margin-top: 5px; }
-        .stat-label { font-size: 0.95rem; opacity: 0.9; }
+        .stat-card.green { background: var(--pixel-green); }
+        .stat-card.purple { background: var(--header-color); }
+        .stat-number { font-size: 2rem; font-weight: bold; margin-top: 5px; font-family: 'Press Start 2P', monospace; }
+        .stat-label { font-size: 0.95rem; text-transform: uppercase; }
 
         .section-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 20px;
             font-weight: bold;
-            color: var(--header-color);
+            color: var(--pixel-yellow);
             display: flex;
             align-items: center;
             gap: 8px;
+            text-shadow: 2px 2px 0px #000;
         }
 
         .subjects-grid {
@@ -174,50 +197,49 @@
             gap: 20px;
         }
         .subject-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 20px;
+            background: var(--card-sub-bg);
+            border: 3px solid var(--border-color);
             padding: 20px;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-shadow: 5px 5px 0px #000;
+            transition: transform 0.1s;
         }
         .subject-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(108, 92, 231, 0.15);
-            border-color: var(--accent-purple);
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px #000;
+            border-color: var(--pixel-cyan);
         }
         .subject-icon { font-size: 2.8rem; margin-bottom: 10px; }
-        .subject-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 8px; color: var(--header-color); }
-        .subject-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
+        .subject-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 8px; color: var(--pixel-cyan); }
+        .subject-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
         .subject-meta {
             font-size: 0.85rem;
-            color: var(--header-color);
+            color: var(--pixel-yellow);
             font-weight: bold;
             margin-bottom: 15px;
             background: var(--nav-bg);
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border: 2px solid var(--border-color);
             width: fit-content;
         }
         .btn-start {
             width: 100%;
             padding: 12px;
-            background: linear-gradient(135deg, var(--accent-purple), var(--header-color));
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-family: 'Kanit', sans-serif;
+            background: var(--pixel-green);
+            color: #000;
+            border: 3px solid #000;
+            font-family: 'Chakra Petch', sans-serif;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+            box-shadow: 4px 4px 0px #000;
+            text-transform: uppercase;
         }
-        .btn-start:hover { 
-            transform: scale(1.02);
-            box-shadow: 0 6px 14px rgba(108, 92, 231, 0.4);
+        .btn-start:active {
+            transform: translate(3px, 3px);
+            box-shadow: 1px 1px 0px #000;
         }
 
         .quiz-top-bar {
@@ -227,143 +249,177 @@
             margin-bottom: 15px;
             background: var(--nav-bg);
             padding: 12px 20px;
-            border-radius: 16px;
-            border: 2px solid var(--border-color);
+            border: 3px solid var(--border-color);
+            box-shadow: 4px 4px 0px #000;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .btn-back {
-            background: var(--text-muted);
-            color: white;
-            border: none;
-            padding: 8px 18px;
-            border-radius: 12px;
+            background: var(--pixel-red);
+            color: #fff;
+            border: 3px solid #000;
+            padding: 8px 16px;
             cursor: pointer;
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Chakra Petch', sans-serif;
             font-weight: bold;
-            transition: opacity 0.2s;
+            box-shadow: 3px 3px 0px #000;
         }
-        .btn-back:hover { opacity: 0.9; }
+        .btn-back:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000;
+        }
+
+        /* นาฬิกาจับเวลา 8-Bit */
+        .timer-display {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1rem;
+            background: #000;
+            color: var(--pixel-yellow);
+            padding: 8px 14px;
+            border: 2px solid var(--pixel-yellow);
+            box-shadow: 2px 2px 0px #000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .timer-warning {
+            color: #ff2a42 !important;
+            border-color: #ff2a42 !important;
+            animation: pulse 0.5s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
 
         .progress-container {
             width: 100%;
-            background-color: var(--border-color);
-            border-radius: 10px;
-            height: 14px;
+            background-color: var(--nav-bg);
+            border: 3px solid var(--border-color);
+            height: 16px;
             margin-bottom: 25px;
-            overflow: hidden;
+            box-sizing: border-box;
         }
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #fd79a8, #a29bfe);
+            background: var(--pixel-yellow);
             width: 0%;
-            transition: width 0.3s ease;
+            transition: width 0.2s steps(5);
         }
 
         .question-card {
             background: var(--card-sub-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 18px;
+            border: 3px solid var(--border-color);
             padding: 20px;
             margin-top: 18px;
+            box-shadow: 4px 4px 0px #000;
         }
-        .question-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 14px; color: var(--header-color); }
+        .question-title { font-weight: bold; font-size: 1.15rem; margin-bottom: 14px; color: var(--pixel-cyan); }
         .options-group { display: flex; flex-direction: column; gap: 10px; }
         .option-label {
             display: flex;
             align-items: center;
             cursor: pointer;
-            padding: 12px 16px;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
+            padding: 12px;
+            border: 3px solid var(--border-color);
             background: var(--card-bg);
-            transition: all 0.2s;
+            font-weight: bold;
         }
         .option-label:hover {
-            border-color: var(--accent-purple);
+            border-color: var(--pixel-yellow);
             background-color: var(--nav-bg);
-            transform: translateX(4px);
         }
-        .option-label input { margin-right: 12px; transform: scale(1.3); accent-color: var(--header-color); }
+        .option-label input { margin-right: 12px; transform: scale(1.4); accent-color: var(--header-color); }
 
         .submit-btn {
             display: block;
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #00b894, #00bec4);
-            color: white;
-            border: none;
-            border-radius: 16px;
-            font-family: 'Kanit', sans-serif;
-            font-size: 1.25rem;
+            background: var(--pixel-yellow);
+            color: #000;
+            border: 4px solid #000;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1.3rem;
             font-weight: bold;
             cursor: pointer;
             margin-top: 30px;
-            box-shadow: 0 6px 16px rgba(0, 184, 148, 0.3);
-            transition: all 0.2s;
+            box-shadow: 5px 5px 0px #000;
+            text-transform: uppercase;
         }
-        .submit-btn:hover { transform: scale(1.01); }
+        .submit-btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0px #000;
+        }
 
         #result-box {
             display: none;
             margin-top: 30px;
             padding: 25px;
-            border-radius: 20px;
             text-align: center;
             background-color: var(--card-sub-bg);
-            border: 3px solid var(--accent-purple);
+            border: 4px solid var(--pixel-green);
+            box-shadow: 6px 6px 0px #000;
         }
-        #result-score { font-size: 3rem; font-weight: bold; color: var(--header-color); }
+        #result-score { font-size: 2.8rem; font-weight: bold; color: var(--pixel-green); font-family: 'Press Start 2P', monospace; margin: 15px 0; }
 
         .explanation {
             display: none;
             margin-top: 15px;
-            padding: 14px 18px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            padding: 14px;
+            border: 3px solid var(--border-color);
+            font-size: 1rem;
+            line-height: 1.5;
         }
-        .correct-ans { background-color: rgba(0, 184, 148, 0.12); color: #00b894; border-left: 6px solid #00b894; }
-        .wrong-ans { background-color: rgba(255, 118, 117, 0.12); color: #d63031; border-left: 6px solid #ff7675; }
+        .correct-ans { background-color: rgba(80, 250, 123, 0.15); color: var(--pixel-green); border-color: var(--pixel-green); }
+        .wrong-ans { background-color: rgba(255, 85, 85, 0.15); color: var(--pixel-red); border-color: var(--pixel-red); }
         .exp-header { font-weight: bold; margin-bottom: 5px; }
 
         .analytics-box {
             margin-top: 20px;
             padding: 18px;
-            border-radius: 14px;
             background: var(--card-bg);
-            border: 2px dashed var(--accent-purple);
+            border: 3px dashed var(--pixel-purple);
             text-align: left;
         }
 
         .save-status {
             margin-top: 15px;
             padding: 12px;
-            border-radius: 10px;
-            font-size: 0.95rem;
+            border: 3px solid var(--border-color);
             font-weight: bold;
         }
 
-        /* Leaderboard Style Anime */
+        /* Leaderboard Style 8-Bit */
         .leaderboard-container {
             margin-top: 40px;
             background: var(--card-sub-bg);
-            padding: 24px;
-            border-radius: 20px;
-            border: 2px solid var(--border-color);
+            padding: 20px;
+            border: 4px solid var(--border-color);
+            box-shadow: 6px 6px 0px #000;
         }
         .leaderboard-table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
         .leaderboard-table th {
             padding: 12px 10px;
-            border-bottom: 2px solid var(--border-color);
-            color: var(--header-color);
+            border-bottom: 4px solid var(--border-color);
+            color: var(--pixel-yellow);
+            text-transform: uppercase;
         }
         .leaderboard-table td {
             padding: 12px 10px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        /* 8-Bit Blinking Effect */
+        .blink {
+            animation: blinker 1s steps(2, start) infinite;
+        }
+        @keyframes blinker {
+            to { opacity: 0; }
         }
     </style>
 </head>
@@ -371,69 +427,92 @@
 
 <div class="container">
     <button class="theme-toggle" onclick="toggleTheme()">
-        <span id="theme-icon">🌙</span> <span id="theme-text">โหมดมืด</span>
+        <span id="theme-icon">🌙</span> <span id="theme-text">LIGHT MODE</span>
     </button>
 
     <div class="main-header">
-        <h1>✨ แบบทดสอบออนไลน์ ✨</h1>
-        <p>คลังแบบทดสอบออนไลน์ สุ่มโจทย์คำถาม พร้อมระบบจัดอันดับ Guild Leaderboard</p>
+        <h1 class="pixel-font">🎮 8-BIT QUIZ 👾</h1>
+        <p class="blink"> >> คลังแบบทดสอบออนไลน์ สุ่มโจทย์คำถาม พร้อมระบบจัดอันดับ Guild Leaderboard << </p>
     </div>
 
     <!-- DASHBOARD PAGE -->
     <div id="dashboard-page" class="page active-page">
-        <!-- ช่องกรอกชื่อผู้ใช้ -->
+        <!-- ช่องกรอกชื่อผู้ใช้ และตั้งค่าการเล่น -->
         <div class="user-name-box">
-            <label for="student-name">👤 ชื่อตัวละคร / ผู้ทดสอบ:</label>
-            <input type="text" id="student-name" placeholder="กรอกชื่อของคุณที่นี่ (เช่น SupaNeung)" />
+            <label for="student-name">🕹️ PLAYER NAME (ชื่อผู้ทดสอบ):</label>
+            <input type="text" id="student-name" placeholder="INSERT NAME HERE..." />
+
+            <div class="config-grid">
+                <div>
+                    <label for="question-limit-select">🔀 QUESTIONS LIMIT (จำนวนข้อ):</label>
+                    <select id="question-limit-select">
+                        <option value="5">5 QUESTS</option>
+                        <option value="10">10 QUESTS</option>
+                        <option value="15">15 QUESTS</option>
+                        <option value="20">20 QUESTS</option>
+                        <option value="ALL" selected>ALL QUESTS (ทั้งหมด)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="timer-select">⏱️ TIMER MODE (เวลาทำข้อสอบ):</label>
+                    <select id="timer-select">
+                        <option value="0">UNLIMITED (ไม่จำกัดเวลา)</option>
+                        <option value="30">30 SECONDS / QUEST (จับเวลาต่อข้อ)</option>
+                        <option value="60">60 SECONDS / QUEST (จับเวลาต่อข้อ)</option>
+                        <option value="300">5 MINUTES TOTAL (จับเวลารวม Stage)</option>
+                        <option value="600">10 MINUTES TOTAL (จับเวลารวม Stage)</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-label">วิชาทั้งหมด</div>
+                <div class="stat-label">TOTAL STAGES</div>
                 <div class="stat-number" id="total-subjects">0</div>
             </div>
             <div class="stat-card green">
-                <div class="stat-label">คลังข้อสอบทั้งหมด</div>
+                <div class="stat-label">TOTAL QUESTS</div>
                 <div class="stat-number" id="total-questions">0</div>
             </div>
             <div class="stat-card purple">
-                <div class="stat-label">ระบบสุ่มโจทย์</div>
-                <div class="stat-number">Random 100%</div>
+                <div class="stat-label">MODE</div>
+                <div class="stat-number" style="font-size: 1.2rem; margin-top: 15px;">RANDOM 100%</div>
             </div>
         </div>
 
-        <div class="section-title">📚 เลือกดันเจี้ยนแบบทดสอบ</div>
+        <div class="section-title">🕸️ SELECT STAGE (เลือกวิชา)</div>
         <div class="subjects-grid" id="subjects-grid"></div>
 
         <!-- กล่องแสดง Leaderboard / อันดับคะแนน -->
         <div class="leaderboard-container">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
-                <h3 style="margin: 0; color: var(--header-color); display: flex; align-items: center; gap: 8px;">
-                    🏆 ตารางผู้ทำคะแนนสูงสุด (Top 10 Leaderboard)
+                <h3 style="margin: 0; color: var(--pixel-yellow); display: flex; align-items: center; gap: 8px;">
+                    🏆 HIGH SCORES (TOP 10)
                 </h3>
                 
                 <div style="display: flex; gap: 8px; align-items: center;">
                     <!-- Dropdown เลือกหมวดวิชา -->
-                    <select id="leaderboard-filter" onchange="renderLeaderboardTable()" style="padding: 8px 14px; border-radius: 10px; border: 2px solid var(--border-color); background: var(--card-bg); color: var(--text-color); font-family: 'Kanit', sans-serif; font-size: 0.9rem; outline:none;">
-                        <option value="ALL">🌐 ทุกหมวดวิชา</option>
+                    <select id="leaderboard-filter" onchange="renderLeaderboardTable()" style="padding: 8px; border: 3px solid var(--border-color); background: var(--card-bg); color: var(--text-color); font-family: 'Chakra Petch', sans-serif; font-weight:bold;">
+                        <option value="ALL">🌐 ALL STAGES</option>
                     </select>
-                    <button onclick="loadLeaderboard()" style="padding: 8px 14px; background: var(--header-color); color: white; border: none; border-radius: 10px; cursor: pointer; font-family: 'Kanit', sans-serif; font-size: 0.85rem; font-weight:bold;">🔄 อัปเดต</button>
+                    <button onclick="loadLeaderboard()" style="padding: 8px 12px; background: var(--pixel-purple); color: #000; border: 3px solid #000; cursor: pointer; font-family: 'Chakra Petch', sans-serif; font-weight:bold;">🔄 REFRESH</button>
                 </div>
             </div>
 
             <table class="leaderboard-table">
                 <thead>
                     <tr>
-                        <th style="width: 90px;">อันดับ</th>
-                        <th>ชื่อผู้ทดสอบ</th>
-                        <th>หมวดวิชา</th>
-                        <th style="text-align: center;">คะแนน</th>
-                        <th style="text-align: right;">คิดเป็น %</th>
+                        <th style="width: 100px;">RANK</th>
+                        <th>PLAYER</th>
+                        <th>STAGE</th>
+                        <th style="text-align: center;">SCORE</th>
+                        <th style="text-align: right;">%</th>
                     </tr>
                 </thead>
                 <tbody id="leaderboard-body">
                     <tr>
-                        <td colspan="5" style="text-align: center; padding: 20px; color: var(--text-muted);">⏳ กำลังดึงข้อมูลอันดับ...</td>
+                        <td colspan="5" style="text-align: center; padding: 20px; color: var(--text-muted);">⏳ LOADING HIGH SCORES...</td>
                     </tr>
                 </tbody>
             </table>
@@ -443,8 +522,13 @@
     <!-- QUIZ PAGE -->
     <div id="quiz-page" class="page">
         <div class="quiz-top-bar">
-            <button class="btn-back" onclick="showDashboard()">← ออกจากภารกิจ</button>
-            <h2 id="current-quiz-title" style="margin:0; font-size:1.2rem; color:var(--header-color);">วิชา...</h2>
+            <button class="btn-back" onclick="exitStage()">◄ EXIT STAGE</button>
+            <h2 id="current-quiz-title" style="margin:0; font-size:1.2rem; color:var(--pixel-yellow);">STAGE...</h2>
+            
+            <!-- ส่วนแสดงนาฬิกาจับเวลา -->
+            <div id="timer-box" class="timer-display" style="display: none;">
+                ⏳ <span id="timer-label">TIME LEFT:</span> <span id="time-remaining">00:00</span>
+            </div>
         </div>
 
         <div class="progress-container">
@@ -453,54 +537,78 @@
 
         <form id="quiz-form">
             <div id="quiz-container"></div>
-            <button type="button" class="submit-btn" onclick="checkQuiz()">✨ ส่งคำตอบและตรวจคะแนน</button>
+            <button type="button" class="submit-btn" onclick="checkQuiz()">⚔️ SUBMIT ANSWERS</button>
         </form>
 
         <div id="result-box">
-            <h2>🎉 ภารกิจเสร็จสิ้น! 🎉</h2>
+            <h2 class="pixel-font" style="color: var(--pixel-yellow);">STAGE CLEAR!</h2>
             <div id="result-score">0 / 0</div>
-            <p id="result-text" style="font-size:1.15rem; margin-top:10px;"></p>
+            <p id="result-text" style="font-size:1.2rem; margin-top:10px; font-weight:bold;"></p>
 
             <div id="analytics-container" class="analytics-box"></div>
 
             <!-- ข้อความแสดงสถานะการบันทึกประวัติ -->
             <div id="save-status" class="save-status" style="display:none;"></div>
 
-            <button class="btn-back" style="background: linear-gradient(135deg, #00b894, #00bec4); margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="startQuiz(activeSubjectKey)">🔄 ลองอีกครั้ง</button>
-            <button class="btn-back" style="background: var(--header-color); margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="showDashboard()">เลือกวิชาอื่น</button>
+            <button class="btn-back" style="background: var(--pixel-green); color:#000; margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="startQuiz(activeSubjectKey)">🔄 RETRY STAGE</button>
+            <button class="btn-back" style="background: var(--pixel-purple); color:#000; margin-top:20px; font-size:1.1rem; padding:12px 24px;" onclick="exitStage()">SELECT STAGE</button>
         </div>
     </div>
 </div>
 
 <script>
-    // ----------------------------------------------------------------------
-    // 🔗 กำหนด Web App URL ที่ได้จาก Google Apps Script
-    // ----------------------------------------------------------------------
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1KjmxmiaTEzSeoCZY7NgHX6C4oZMD3sOYdnCo5VP6-BQxfNKQ4Ctv2pkk58ShzWUQNw/exec';
 
     let activeSubjectKey = "";
     let currentShuffledQuestions = [];
-    let rawLeaderboardData = []; // ข้อมูลอันดับทั้งหมด
+    let rawLeaderboardData = [];
+
+    // ตัวแปรสำหรับระบบจับเวลา
+    let timerInterval = null;
+    let timeRemaining = 0;
+    let timerModeSetting = 0; // 0 = Unlimited, 30/60 = Per Quest, 300/600 = Total Stage
+    let isTimeUp = false;
 
     window.onload = function() {
+        applyAutoThemeByTime();
         renderDashboard();
         updateProgress();
         loadLeaderboard();
     };
 
-    function toggleTheme() {
+    function applyAutoThemeByTime() {
+        const currentHour = new Date().getHours();
+        const isDayTime = currentHour >= 6 && currentHour < 18;
+
+        if (isDayTime) {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
+
+    function setTheme(themeMode) {
         const body = document.body;
         const themeIcon = document.getElementById("theme-icon");
         const themeText = document.getElementById("theme-text");
 
-        if (body.getAttribute("data-theme") === "dark") {
+        if (themeMode === 'light') {
+            body.setAttribute("data-theme", "light");
+            themeIcon.innerText = "☀️";
+            themeText.innerText = "LIGHT MODE";
+        } else {
             body.removeAttribute("data-theme");
             themeIcon.innerText = "🌙";
-            themeText.innerText = "โหมดมืด";
+            themeText.innerText = "DARK MODE";
+        }
+    }
+
+    function toggleTheme() {
+        const currentTheme = document.body.getAttribute("data-theme");
+        if (currentTheme === "light") {
+            setTheme('dark');
         } else {
-            body.setAttribute("data-theme", "dark");
-            themeIcon.innerText = "☀️";
-            themeText.innerText = "โหมดสว่าง";
+            setTheme('light');
         }
     }
 
@@ -534,71 +642,225 @@
                     <div class="subject-desc">${quizData[key].desc}</div>
                 </div>
                 <div>
-                    <div class="subject-meta">📝 ${qCount} ข้อ (สุ่มโจทย์)</div>
-                    <button class="btn-start" onclick="startQuiz('${key}')">เริ่มทดสอบ</button>
+                    <div class="subject-meta">🕷️ ${qCount} QUESTS AVAILABLE</div>
+                    <button class="btn-start" onclick="startQuiz('${key}')">START QUEST</button>
                 </div>
             `;
             grid.appendChild(card);
         }
 
         document.getElementById("total-subjects").innerText = totalSubjectsCount;
-        document.getElementById("total-questions").innerText = totalQuestionsCount + " ข้อ";
+        document.getElementById("total-questions").innerText = totalQuestionsCount;
     }
 
-    function startQuiz(subjectKey) {
-        const studentNameInput = document.getElementById("student-name").value.trim();
-        if (!studentNameInput) {
-            alert("กรุณากรอกชื่อตัวละคร/ผู้ทดสอบ ก่อนเริ่มทำแบบทดสอบครับ!");
-            document.getElementById("student-name").focus();
+	function startQuiz(subjectKey) {
+		const studentNameInput = document.getElementById("student-name").value.trim();
+		if (!studentNameInput) {
+			alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
+			document.getElementById("student-name").focus();
+			return;
+		}
+
+		activeSubjectKey = subjectKey;
+		const currentQuiz = quizData[subjectKey];
+
+		// 1. จัดการระบบสุ่มจำนวนข้อ (Question Limit Selector)
+		const limitVal = document.getElementById("question-limit-select").value;
+		let allQuestionsShuffled = shuffleArray(currentQuiz.questions);
+		
+		if (limitVal !== "ALL") {
+			const limitNum = parseInt(limitVal, 10);
+			allQuestionsShuffled = allQuestionsShuffled.slice(0, limitNum);
+		}
+
+		currentShuffledQuestions = allQuestionsShuffled.map(qObj => {
+			return {
+				...qObj,
+				shuffledOptions: qObj.options
+			};
+		});
+
+		document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
+		document.getElementById("result-box").style.display = "none";
+		document.getElementById("save-status").style.display = "none";
+		document.querySelector(".submit-btn").style.display = "block";
+
+		const container = document.getElementById("quiz-container");
+		container.innerHTML = "";
+
+		currentShuffledQuestions.forEach((qObj, index) => {
+			const card = document.createElement("div");
+			card.className = "question-card";
+
+			let optionsHtml = "";
+			const optionPrefixes = ["ก", "ข", "ค", "ง"];
+
+			qObj.shuffledOptions.forEach((opt, optIndex) => {
+				const prefix = optionPrefixes[optIndex];
+				const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
+
+				optionsHtml += `
+					<label class="option-label">
+						<input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
+					</label>
+				`;
+			});
+
+			// 🟢 เพิ่มส่วนเช็กรูปภาพตรงนี้
+			const imageHtml = qObj.image 
+				? `<div class="question-image"><img src="${qObj.image}" alt="รูปประกอบคำถาม" style="max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px;"></div>` 
+				: '';
+
+			// 🟢 นำ imageHtml ไปแทรกไว้ระหว่างหัวข้อคำถามและตัวเลือก
+			card.innerHTML = `
+				<div class="question-title">Q${index + 1}: ${qObj.q}</div>
+				${imageHtml}
+				<div class="options-group">${optionsHtml}</div>
+				<div class="explanation" id="exp${index}"></div>
+			`;
+			container.appendChild(card);
+		});
+
+		document.getElementById("dashboard-page").classList.remove("active-page");
+		document.getElementById("quiz-page").classList.add("active-page");
+		updateProgress();
+
+		// 2. เริ่มต้นระบบจับเวลา (Timer Setup)
+		setupTimer();
+
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+    // --- ระบบจับเวลา (Timer Logic) ---
+    function setupTimer() {
+        clearInterval(timerInterval);
+        isTimeUp = false;
+        
+        const timerSelectVal = parseInt(document.getElementById("timer-select").value, 10);
+        const timerBox = document.getElementById("timer-box");
+        const timerDisplay = document.getElementById("time-remaining");
+
+        timerBox.classList.remove("timer-warning");
+
+        if (timerSelectVal === 0) {
+            timerBox.style.display = "none";
             return;
         }
 
-        activeSubjectKey = subjectKey;
-        const currentQuiz = quizData[subjectKey];
+        timerBox.style.display = "flex";
 
-        currentShuffledQuestions = shuffleArray(currentQuiz.questions).map(qObj => {
-            return {
-                ...qObj,
-                shuffledOptions: shuffleArray(qObj.options)
-            };
-        });
+        if (timerSelectVal === 30 || timerSelectVal === 60) {
+            // จับเวลาต่อข้อ -> เวลาตั้งต้น = วินาทีต่อข้อ * จำนวนข้อที่เล่น
+            timeRemaining = timerSelectVal * currentShuffledQuestions.length;
+            document.getElementById("timer-label").innerText = "TIME LEFT:";
+        } else {
+            // จับเวลารวมทั้ง Stage
+            timeRemaining = timerSelectVal;
+            document.getElementById("timer-label").innerText = "STAGE TIME:";
+        }
 
-        document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
-        document.getElementById("result-box").style.display = "none";
-        document.getElementById("save-status").style.display = "none";
-        document.querySelector(".submit-btn").style.display = "block";
+        updateTimerDisplay();
 
-        const container = document.getElementById("quiz-container");
-        container.innerHTML = "";
+        timerInterval = setInterval(() => {
+            timeRemaining--;
+            updateTimerDisplay();
+
+            if (timeRemaining <= 10) {
+                timerBox.classList.add("timer-warning");
+            }
+
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                isTimeUp = true;
+                alert("⏰ TIME OVER! หมดเวลาทำแบบทดสอบ ระบบจะส่งคำตอบให้อัตโนมัติ");
+                checkQuiz();
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        document.getElementById("time-remaining").innerText = 
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function exitStage() {
+        clearInterval(timerInterval);
+        showDashboard();
+    }
+
+    function checkQuiz() {
+        // หยุดนาฬิกาจับเวลาทันทีที่ส่งคำตอบ
+        clearInterval(timerInterval);
+
+        let score = 0;
+        let total = currentShuffledQuestions.length;
+        let wrongCount = 0;
 
         currentShuffledQuestions.forEach((qObj, index) => {
-            const card = document.createElement("div");
-            card.className = "question-card";
+            let selected = document.querySelector(`input[name="q${index}"]:checked`);
+            let expDiv = document.getElementById(`exp${index}`);
+            
+            expDiv.style.display = "block";
+            
+            const cleanCorrectAns = qObj.ans.replace(/^[ก-ง]\.\s*/, '');
 
-            let optionsHtml = "";
-            const optionPrefixes = ["ก", "ข", "ค", "ง"];
-
-            qObj.shuffledOptions.forEach((opt, optIndex) => {
-                const prefix = optionPrefixes[optIndex];
-                optionsHtml += `
-                    <label class="option-label">
-                        <input type="radio" name="q${index}" value="${opt}" onchange="updateProgress()"> ${prefix}. ${opt.replace(/^[ก-ง]\.\s*/, '')}
-                    </label>
-                `;
-            });
-
-            card.innerHTML = `
-                <div class="question-title">${index + 1}. ${qObj.q}</div>
-                <div class="options-group">${optionsHtml}</div>
-                <div class="explanation" id="exp${index}"></div>
-            `;
-            container.appendChild(card);
+            if (selected) {
+                if (selected.value === cleanCorrectAns) {
+                    score++;
+                    expDiv.className = "explanation correct-ans";
+                    expDiv.innerHTML = `<div class="exp-header">✓ CORRECT!</div>${qObj.explain}`;
+                } else {
+                    wrongCount++;
+                    expDiv.className = "explanation wrong-ans";
+                    expDiv.innerHTML = `<div class="exp-header">✗ WRONG! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+                }
+            } else {
+                wrongCount++;
+                expDiv.className = "explanation wrong-ans";
+                expDiv.innerHTML = `<div class="exp-header">✗ MISSED! (CORRECT: ${qObj.ans})</div>${qObj.explain}`;
+            }
         });
 
-        document.getElementById("dashboard-page").classList.remove("active-page");
-        document.getElementById("quiz-page").classList.add("active-page");
-        updateProgress();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        let resultBox = document.getElementById("result-box");
+        let resultScore = document.getElementById("result-score");
+        let resultText = document.getElementById("result-text");
+        let analyticsContainer = document.getElementById("analytics-container");
+
+        resultBox.style.display = "block";
+        document.querySelector(".submit-btn").style.display = "none";
+        resultScore.innerHTML = `${score}/${total}`;
+        
+        let percentage = (score / total) * 100;
+
+        if (percentage >= 80) {
+            confetti({
+                particleCount: 120,
+                spread: 70,
+                origin: { y: 0.6 },
+                shapes: ['square']
+            });
+            resultText.innerHTML = "🏆 RANK S - PERFECT VICTORY!";
+        } else if (percentage >= 50) {
+            resultText.innerHTML = "👍 RANK A - STAGE CLEAR!";
+        } else {
+            resultText.innerHTML = "💀 GAME OVER - TRY AGAIN!";
+        }
+
+        analyticsContainer.innerHTML = `
+            <b>📊 QUEST SUMMARY:</b><br>
+            • ACCURACY: <span style="color:var(--pixel-green); font-weight:bold;">${percentage.toFixed(0)}%</span> (${score} Correct)<br>
+            • MISSED: <span style="color:var(--pixel-red); font-weight:bold;">${wrongCount} Quests</span><br>
+            ${isTimeUp ? '• <span style="color:var(--pixel-red); font-weight:bold;">⏱️ STAGE ENDED BY TIMEOUT</span><br>' : ''}
+            <i>💡 SCROLL UP TO REVIEW YOUR ANSWERS</i>
+        `;
+
+        const userName = document.getElementById("student-name").value.trim() || "PLAYER 1";
+        const categoryName = quizData[activeSubjectKey].title;
+        sendQuizResult(userName, categoryName, score, total);
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
     function updateProgress() {
@@ -620,74 +882,12 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function checkQuiz() {
-        let score = 0;
-        let total = currentShuffledQuestions.length;
-        let wrongCount = 0;
-
-        currentShuffledQuestions.forEach((qObj, index) => {
-            let selected = document.querySelector(`input[name="q${index}"]:checked`);
-            let expDiv = document.getElementById(`exp${index}`);
-            
-            expDiv.style.display = "block";
-            
-            if (selected) {
-                if (selected.value === qObj.ans) {
-                    score++;
-                    expDiv.className = "explanation correct-ans";
-                    expDiv.innerHTML = `<div class="exp-header">✓ ถูกต้อง!</div>${qObj.explain}`;
-                } else {
-                    wrongCount++;
-                    expDiv.className = "explanation wrong-ans";
-                    expDiv.innerHTML = `<div class="exp-header">✗ ตอบผิด (คำตอบที่ถูกต้องคือ: ${qObj.ans})</div>${qObj.explain}`;
-                }
-            } else {
-                wrongCount++;
-                expDiv.className = "explanation wrong-ans";
-                expDiv.innerHTML = `<div class="exp-header">✗ ยังไม่ได้ตอบข้อนี้ (คำตอบที่ถูกต้องคือ: ${qObj.ans})</div>${qObj.explain}`;
-            }
-        });
-
-        let resultBox = document.getElementById("result-box");
-        let resultScore = document.getElementById("result-score");
-        let resultText = document.getElementById("result-text");
-        let analyticsContainer = document.getElementById("analytics-container");
-
-        resultBox.style.display = "block";
-        document.querySelector(".submit-btn").style.display = "none";
-        resultScore.innerHTML = `${score} / ${total}`;
-        
-        let percentage = (score / total) * 100;
-
-        if (percentage >= 80) {
-            confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
-            resultText.innerHTML = "🌟 <b>SS Rank!</b> สุดยอดมากเลยครับ ความรู้ระดับเซียน!";
-        } else if (percentage >= 50) {
-            resultText.innerHTML = "👍 <b>A Rank!</b> ผ่านภารกิจแล้ว ทบทวนอีกนิดเก่งแน่นอน!";
-        } else {
-            resultText.innerHTML = "💪 <b>B Rank!</b> ไม่เป็นไรครับ ทบทวนเฉลยแล้วลองสู้ใหม่อีกรอบนะ!";
-        }
-
-        analyticsContainer.innerHTML = `
-            <b>📊 สรุปผลภารกิจ:</b><br>
-            • ตอบถูกต้อง: <span style="color:#00b894; font-weight:bold;">${score} ข้อ</span> (${percentage.toFixed(0)}%)<br>
-            • ข้อที่ควรทบทวน: <span style="color:#ff7675; font-weight:bold;">${wrongCount} ข้อ</span><br>
-            <i>💡 สามารถเลื่อนขึ้นเพื่อดูเฉลยละเอียดได้เลยครับ</i>
-        `;
-
-        const userName = document.getElementById("student-name").value.trim() || "ไม่ระบุชื่อ";
-        const categoryName = quizData[activeSubjectKey].title;
-        sendQuizResult(userName, categoryName, score, total);
-
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
     function sendQuizResult(userName, categoryName, score, total) {
         const statusBox = document.getElementById("save-status");
         statusBox.style.display = "block";
-        statusBox.style.backgroundColor = "rgba(162, 155, 254, 0.2)";
-        statusBox.style.color = "var(--header-color)";
-        statusBox.innerText = "⏳ กำลังบันทึกประวัติลง Google Sheet...";
+        statusBox.style.backgroundColor = "var(--nav-bg)";
+        statusBox.style.color = "var(--pixel-yellow)";
+        statusBox.innerText = "⏳ SAVING SCORE TO LEADERBOARD...";
 
         const data = { name: userName, category: categoryName, score: score, total: total };
 
@@ -699,28 +899,25 @@
         .then(response => response.json())
         .then(result => {
             if (result.status === "success") {
-                statusBox.style.backgroundColor = "rgba(0, 184, 148, 0.2)";
-                statusBox.style.color = "#00b894";
-                statusBox.innerText = "✅ บันทึกประวัติและอัปเดตอันดับเรียบร้อยแล้ว!";
-                loadLeaderboard(); // อัปเดตตารางอันดับทันที
+                statusBox.style.backgroundColor = "rgba(80, 250, 123, 0.2)";
+                statusBox.style.color = "var(--pixel-green)";
+                statusBox.innerText = "✅ SCORE SAVED TO LEADERBOARD!";
+                loadLeaderboard();
             } else {
-                throw new Error(result.message || "เกิดข้อผิดพลาด");
+                throw new Error(result.message || "ERROR");
             }
         })
         .catch(error => {
             console.error('Error recording result:', error);
-            statusBox.style.backgroundColor = "rgba(255, 118, 117, 0.2)";
-            statusBox.style.color = "#d63031";
-            statusBox.innerText = "❌ ไม่สามารถบันทึกประวัติลง Google Sheet ได้";
+            statusBox.style.backgroundColor = "rgba(255, 85, 85, 0.2)";
+            statusBox.style.color = "var(--pixel-red)";
+            statusBox.innerText = "❌ FAILED TO SAVE SCORE!";
         });
     }
 
-    // ----------------------------------------------------------------------
-    // 🏆 ฟังก์ชัน Leaderboard แยกหมวดวิชา
-    // ----------------------------------------------------------------------
     function loadLeaderboard() {
         const tbody = document.getElementById("leaderboard-body");
-        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 20px; color: var(--text-muted);">⏳ กำลังดึงข้อมูลอันดับ...</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 20px; color: var(--text-muted);">⏳ LOADING HIGH SCORES...</td></tr>`;
 
         fetch(GOOGLE_SCRIPT_URL)
             .then(response => response.json())
@@ -731,7 +928,7 @@
             })
             .catch(error => {
                 console.error("Error loading leaderboard:", error);
-                tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 15px; color: #ff7675;">❌ ไม่สามารถโหลดข้อมูลอันดับได้</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 15px; color: var(--pixel-red);">❌ FAILED TO LOAD SCORES</td></tr>`;
             });
     }
 
@@ -740,10 +937,10 @@
         const currentValue = filterSelect.value;
         const categories = [...new Set(rawLeaderboardData.map(item => item.category))];
         
-        let optionsHtml = `<option value="ALL">🌐 ทุกหมวดวิชา</option>`;
+        let optionsHtml = `<option value="ALL">🌐 ALL STAGES</option>`;
         categories.forEach(cat => {
             if (cat) {
-                optionsHtml += `<option value="${cat}">📚 ${cat}</option>`;
+                optionsHtml += `<option value="${cat}">👾 ${cat}</option>`;
             }
         });
 
@@ -761,16 +958,16 @@
         }
 
         if (filteredData.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 20px;">ยังไม่มีผู้ท้าชิงในหมวดวิชานี้</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 20px;">NO HIGH SCORES YET</td></tr>`;
             return;
         }
 
         let html = "";
         filteredData.forEach((item, index) => {
             let badge = index + 1;
-            if (index === 0) badge = "👑 1st";
-            else if (index === 1) badge = "⭐ 2nd";
-            else if (index === 2) badge = "✨ 3rd";
+            if (index === 0) badge = "🥇 1ST";
+            else if (index === 1) badge = "🥈 2ND";
+            else if (index === 2) badge = "🥉 3RD";
 
             let percentText = item.percent <= 1 && item.percent > 0 
                 ? (item.percent * 100).toFixed(0) + "%" 
@@ -778,17 +975,18 @@
 
             html += `
                 <tr>
-                    <td style="font-weight: bold; color: var(--header-color);">${badge}</td>
-                    <td style="font-weight: 600;">${item.name}</td>
-                    <td style="color: var(--text-muted); font-size: 0.88rem;">${item.category}</td>
-                    <td style="text-align: center; font-weight: bold;">${item.score}/${item.total}</td>
-                    <td style="text-align: right; color: #00b894; font-weight: bold;">${percentText}</td>
+                    <td style="font-weight: bold; color: var(--pixel-yellow); font-family: 'Press Start 2P', monospace; font-size: 0.8rem;">${badge}</td>
+                    <td style="font-weight: bold;">${item.name}</td>
+                    <td style="color: var(--text-muted); font-size: 0.9rem;">${item.category}</td>
+                    <td style="text-align: center; font-weight: bold; font-family: 'Press Start 2P', monospace; font-size: 0.8rem;">${item.score}/${item.total}</td>
+                    <td style="text-align: right; color: var(--pixel-green); font-weight: bold; font-family: 'Press Start 2P', monospace; font-size: 0.8rem;">${percentText}</td>
                 </tr>
             `;
         });
 
         tbody.innerHTML = html;
     }
+	
 </script>
 
 </body>
