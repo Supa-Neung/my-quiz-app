@@ -653,76 +653,83 @@
         document.getElementById("total-questions").innerText = totalQuestionsCount;
     }
 
-    function startQuiz(subjectKey) {
-        const studentNameInput = document.getElementById("student-name").value.trim();
-        if (!studentNameInput) {
-            alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
-            document.getElementById("student-name").focus();
-            return;
-        }
+	function startQuiz(subjectKey) {
+		const studentNameInput = document.getElementById("student-name").value.trim();
+		if (!studentNameInput) {
+			alert("PLEASE ENTER YOUR PLAYER NAME FIRST!");
+			document.getElementById("student-name").focus();
+			return;
+		}
 
-        activeSubjectKey = subjectKey;
-        const currentQuiz = quizData[subjectKey];
+		activeSubjectKey = subjectKey;
+		const currentQuiz = quizData[subjectKey];
 
-        // 1. จัดการระบบสุ่มจำนวนข้อ (Question Limit Selector)
-        const limitVal = document.getElementById("question-limit-select").value;
-        let allQuestionsShuffled = shuffleArray(currentQuiz.questions);
-        
-        if (limitVal !== "ALL") {
-            const limitNum = parseInt(limitVal, 10);
-            allQuestionsShuffled = allQuestionsShuffled.slice(0, limitNum);
-        }
+		// 1. จัดการระบบสุ่มจำนวนข้อ (Question Limit Selector)
+		const limitVal = document.getElementById("question-limit-select").value;
+		let allQuestionsShuffled = shuffleArray(currentQuiz.questions);
+		
+		if (limitVal !== "ALL") {
+			const limitNum = parseInt(limitVal, 10);
+			allQuestionsShuffled = allQuestionsShuffled.slice(0, limitNum);
+		}
 
-        currentShuffledQuestions = allQuestionsShuffled.map(qObj => {
-            return {
-                ...qObj,
-                shuffledOptions: qObj.options
-            };
-        });
+		currentShuffledQuestions = allQuestionsShuffled.map(qObj => {
+			return {
+				...qObj,
+				shuffledOptions: qObj.options
+			};
+		});
 
-        document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
-        document.getElementById("result-box").style.display = "none";
-        document.getElementById("save-status").style.display = "none";
-        document.querySelector(".submit-btn").style.display = "block";
+		document.getElementById("current-quiz-title").innerText = `${currentQuiz.icon} ${currentQuiz.title}`;
+		document.getElementById("result-box").style.display = "none";
+		document.getElementById("save-status").style.display = "none";
+		document.querySelector(".submit-btn").style.display = "block";
 
-        const container = document.getElementById("quiz-container");
-        container.innerHTML = "";
+		const container = document.getElementById("quiz-container");
+		container.innerHTML = "";
 
-        currentShuffledQuestions.forEach((qObj, index) => {
-            const card = document.createElement("div");
-            card.className = "question-card";
+		currentShuffledQuestions.forEach((qObj, index) => {
+			const card = document.createElement("div");
+			card.className = "question-card";
 
-            let optionsHtml = "";
-            const optionPrefixes = ["ก", "ข", "ค", "ง"];
+			let optionsHtml = "";
+			const optionPrefixes = ["ก", "ข", "ค", "ง"];
 
-            qObj.shuffledOptions.forEach((opt, optIndex) => {
-                const prefix = optionPrefixes[optIndex];
-                const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
+			qObj.shuffledOptions.forEach((opt, optIndex) => {
+				const prefix = optionPrefixes[optIndex];
+				const cleanOptText = opt.replace(/^[ก-ง]\.\s*/, '');
 
-                optionsHtml += `
-                    <label class="option-label">
-                        <input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
-                    </label>
-                `;
-            });
+				optionsHtml += `
+					<label class="option-label">
+						<input type="radio" name="q${index}" value="${cleanOptText}" onchange="updateProgress()"> ${prefix}. ${cleanOptText}
+					</label>
+				`;
+			});
 
-            card.innerHTML = `
-                <div class="question-title">Q${index + 1}: ${qObj.q}</div>
-                <div class="options-group">${optionsHtml}</div>
-                <div class="explanation" id="exp${index}"></div>
-            `;
-            container.appendChild(card);
-        });
+			// 🟢 เพิ่มส่วนเช็กรูปภาพตรงนี้
+			const imageHtml = qObj.image 
+				? `<div class="question-image"><img src="${qObj.image}" alt="รูปประกอบคำถาม" style="max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px;"></div>` 
+				: '';
 
-        document.getElementById("dashboard-page").classList.remove("active-page");
-        document.getElementById("quiz-page").classList.add("active-page");
-        updateProgress();
+			// 🟢 นำ imageHtml ไปแทรกไว้ระหว่างหัวข้อคำถามและตัวเลือก
+			card.innerHTML = `
+				<div class="question-title">Q${index + 1}: ${qObj.q}</div>
+				${imageHtml}
+				<div class="options-group">${optionsHtml}</div>
+				<div class="explanation" id="exp${index}"></div>
+			`;
+			container.appendChild(card);
+		});
 
-        // 2. เริ่มต้นระบบจับเวลา (Timer Setup)
-        setupTimer();
+		document.getElementById("dashboard-page").classList.remove("active-page");
+		document.getElementById("quiz-page").classList.add("active-page");
+		updateProgress();
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+		// 2. เริ่มต้นระบบจับเวลา (Timer Setup)
+		setupTimer();
+
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
     // --- ระบบจับเวลา (Timer Logic) ---
     function setupTimer() {
@@ -979,6 +986,7 @@
 
         tbody.innerHTML = html;
     }
+	
 </script>
 
 </body>
