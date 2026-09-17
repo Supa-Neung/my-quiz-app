@@ -706,19 +706,37 @@
 				`;
 			});
 
-			// 🟢 เพิ่มส่วนเช็กรูปภาพตรงนี้
+			// ส่วนแสดงรูปภาพ (ถ้ามี)
 			const imageHtml = qObj.image 
 				? `<div class="question-image"><img src="${qObj.image}" alt="รูปประกอบคำถาม" style="max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px;"></div>` 
 				: '';
 
-			// 🟢 นำ imageHtml ไปแทรกไว้ระหว่างหัวข้อคำถามและตัวเลือก
+			// 🟢 เพิ่มส่วนกระดานวาดรูปด้วยปากกา (Canvas Scratchpad)
+			const canvasNoteHtml = `
+				<div class="scratchpad-box" style="margin-top: 12px;">
+					<details>
+						<summary style="cursor: pointer; font-size: 0.9em; color: #555; font-weight: bold; margin-bottom: 8px;">🎨 เปิดกระดานวาดรูป/เขียนทดเลข</summary>
+						<div style="position: relative; display: inline-block; width: 100%;">
+							<canvas id="canvas-q${index}" width="600" height="200" style="border: 1px dashed #007bff; background: #fafafa; border-radius: 8px; width: 100%; touch-action: none; cursor: crosshair;"></canvas>
+							<div style="margin-top: 5px; text-align: right;">
+								<button type="button" onclick="clearCanvas(${index})" style="padding: 4px 12px; font-size: 0.85em; background: #dc3545; color: #fff; border: none; border-radius: 4px; cursor: pointer;">🗑️ ลบที่เขียน</button>
+							</div>
+						</div>
+					</details>
+				</div>
+			`;
+
 			card.innerHTML = `
 				<div class="question-title">Q${index + 1}: ${qObj.q}</div>
 				${imageHtml}
 				<div class="options-group">${optionsHtml}</div>
+				${canvasNoteHtml}
 				<div class="explanation" id="exp${index}"></div>
 			`;
 			container.appendChild(card);
+
+			// 🟢 เรียกเปิดใช้งานระบบปากกาบน Canvas ของข้อนี้
+			setTimeout(() => initCanvas(`canvas-q${index}`), 50);
 		});
 
 		document.getElementById("dashboard-page").classList.remove("active-page");
@@ -986,6 +1004,76 @@
 
         tbody.innerHTML = html;
     }
+	
+	// ฟังก์ชันเริ่มต้นระบบขีดเขียนบน Canvas
+	function initCanvas(canvasId) {
+		const canvas = document.getElementById(canvasId);
+		if (!canvas) return;
+		
+		const ctx = canvas.getContext('2d');
+		let isDrawing = false;
+
+		// ตั้งค่าคุณสมบัติเส้นปากกา
+		ctx.strokeStyle = '#0056b3'; // สีปากกา (สีน้ำเงิน)
+		ctx.lineWidth = 0.5;          // ขนาดเส้น
+		ctx.lineCap = 'round';
+		ctx.lineJoin = 'round';
+
+		function getCoordinates(e) {
+			const rect = canvas.getBoundingClientRect();
+			const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+			const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+			
+			// คำนวณอัตราส่วนสเกลของ Canvas เมื่อแสดงบนหน้าจอขนาดต่าง ๆ
+			const scaleX = canvas.width / rect.width;
+			const scaleY = canvas.height / rect.height;
+
+			return {
+				x: (clientX - rect.left) * scaleX,
+				y: (clientY - rect.top) * scaleY
+			};
+		}
+
+		function startDrawing(e) {
+			isDrawing = true;
+			const pos = getCoordinates(e);
+			ctx.beginPath();
+			ctx.moveTo(pos.x, pos.y);
+		}
+
+		function draw(e) {
+			if (!isDrawing) return;
+			e.preventDefault(); // ป้องกันการสกอร์ลหน้าจอขณะใช้นิ้วเขียน
+			const pos = getCoordinates(e);
+			ctx.lineTo(pos.x, pos.y);
+			ctx.stroke();
+		}
+
+		function stopDrawing() {
+			isDrawing = false;
+			ctx.beginPath();
+		}
+
+		// Event Listeners สำหรับเม้าส์
+		canvas.addEventListener('mousedown', startDrawing);
+		canvas.addEventListener('mousemove', draw);
+		canvas.addEventListener('mouseup', stopDrawing);
+		canvas.addEventListener('mouseleave', stopDrawing);
+
+		// Event Listeners สำหรับจอสัมผัส / ปากกาสไตลัส (Touch)
+		canvas.addEventListener('touchstart', startDrawing);
+		canvas.addEventListener('touchmove', draw);
+		canvas.addEventListener('touchend', stopDrawing);
+	}
+
+	// ฟังก์ชันล้างภาพที่วาด
+	function clearCanvas(index) {
+		const canvas = document.getElementById(`canvas-q${index}`);
+		if (canvas) {
+			const ctx = canvas.getContext('2d');
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	}
 	
 </script>
 
