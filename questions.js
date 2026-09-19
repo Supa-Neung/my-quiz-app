@@ -997,5 +997,958 @@ const quizData = {
 			explain: "s = 15 cm, s' = +10 cm ใช้สูตร 1/f = 1/s + 1/s' -> 1/f = 1/15 + 1/10 = 5/30 ดังนั้น f = +6 cm"
 		  }
 		]
-	  }
+	  },
+	  thai_m3_1: {
+		title: "ภาษาไทย ม.3 - คำทับศัพท์ ศัพท์บัญญัติ และศัพท์วิชาการ",
+		icon: "📝",
+		desc: "แบบฝึกทักษะการสะกดคำทับศัพท์ ถอดศัพท์บัญญัติ และความรู้เรื่องศัพท์วิชาการ วิชาภาษาไทย ม.3",
+		questions: [
+			// --- หมวดที่ 1: การสะกดคำทับศัพท์ ---
+			{
+				q: "คำว่า 'Game' เมื่อเขียนเป็นคำทับศัพท์ภาษาไทยที่ถูกต้องคือข้อใด",
+				options: [
+					"เกมส์",
+					"เกม",
+					"เกรม",
+					"เก็ม"
+				],
+				ans: "เกม",
+				explain: "คำทับศัพท์คำว่า Game ใช้ 'เกม' โดยไม่ต้องใส่ ส การันต์ (คำว่า เกมส์ มักใช้กับชื่อการแข่งขันกีฬาเฉพาะ เช่น เอเชียนเกมส์)"
+			},
+			{
+				q: "คำว่า 'Football' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"ฟุตบอลล์",
+					"ฟุ๊ตบอล",
+					"ฟุตบอล",
+					"ฟุตบอน"
+				],
+				ans: "ฟุตบอล",
+				explain: "คำทับศัพท์คำว่า Football สะกดตรงตัวตามหลักเกณฑ์คือ 'ฟุตบอล' โดยไม่มีเครื่องหมายการันต์ที่ ล"
+			},
+			{
+				q: "คำว่า 'Battery' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"แบตเตอรี่",
+					"แบตเตอรี",
+					"แบตเตอรี่์",
+					"แบตเตอร์รี่"
+				],
+				ans: "แบตเตอรี่",
+				explain: "คำว่า Battery เขียนทับศัพท์ภาษาไทยเป็น 'แบตเตอรี่' โดยใช้ ไม้เอก บน ร"
+			},
+			{
+				q: "คำว่า 'Broccoli' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"บล็อกโคลี่",
+					"บรอกโคลี",
+					"บร็อคโคลี่",
+					"บล็อกโคลี"
+				],
+				ans: "บรอกโคลี",
+				explain: "ตามหลักเกณฑ์การทับศัพท์ของราชบัณฑิตยสภา Broccoli สะกดว่า 'บรอกโคลี'"
+			},
+			{
+				q: "คำว่า 'Download' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"ดาวโหลด",
+					"ดาวน์โหลด",
+					"ดาวน์โหลด",
+					"ดาว์นโหลด"
+				],
+				ans: "ดาวน์โหลด",
+				explain: "คำว่า Download เขียนทับศัพท์เป็น 'ดาวน์โหลด' โดยใส่ น การันต์ (น์) ในคำว่า ดาวน์"
+			},
+			{
+				q: "คำว่า 'Clinic' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"คลินิค",
+					"คลินิก",
+					"คลีนิก",
+					"คลีนิค"
+				],
+				ans: "คลินิก",
+				explain: "ตัว c หรือ k ที่เป็นตัวสะกดท้ายคำในภาษาอังกฤษ ถอดเป็น ก ไก่ จึงสะกดว่า 'คลินิก'"
+			},
+			{
+				q: "คำว่า 'Alcohol' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"แอลกอฮอลล์",
+					"แอลกอฮอล์",
+					"แอลกอฮอล",
+					"แอลกอฮอร์"
+				],
+				ans: "แอลกอฮอล์",
+				explain: "คำว่า Alcohol เขียนทับศัพท์ภาษาไทยเป็น 'แอลกอฮอล์' โดยใส่ ล การันต์ (ล์) ที่ท้ายคำ"
+			},
+			{
+				q: "คำว่า 'Dinosaur' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"ไดโนเสาร์",
+					"ไดโนเสา",
+					"ไดโนซอร์",
+					"ไดโนเสาร"
+				],
+				ans: "ไดโนเสาร์",
+				explain: "คำว่า Dinosaur ถอดเป็นคำทับศัพท์ในภาษาไทยที่ใช้กันเป็นมาตรฐานว่า 'ไดโนเสาร์'"
+			},
+			{
+				q: "คำว่า 'Vaccine' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"วัคซีน",
+					"แว็กซีน",
+					"วัคซีนน์",
+					"แวคซีน"
+				],
+				ans: "วัคซีน",
+				explain: "คำว่า Vaccine เขียนทับศัพท์ภาษาไทยเป็น 'วัคซีน'"
+			},
+			{
+				q: "คำว่า 'Postcard' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+				options: [
+					"ไปรษณียบัตร",
+					"โปสต์การ์ด",
+					"โพสต์การ์ด",
+					"โปสการ์ด"
+				],
+				ans: "โปสต์การ์ด",
+				explain: "คำทับศัพท์ของ Postcard สะกดว่า 'โปสต์การ์ด' (ส่วน 'ไปรษณียบัตร' เป็นศัพท์บัญญัติ)"
+			},
+
+			// --- หมวดที่ 2: ศัพท์บัญญัติ ---
+			{
+				q: "คำภาษาอังกฤษว่า 'Network' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"ระบบเชื่อมโยง",
+					"สายส่งสัญญาณ",
+					"เครือข่าย",
+					"วงจรสาย"
+				],
+				ans: "เครือข่าย",
+				explain: "ศัพท์บัญญัติของคำว่า Network คือ 'เครือข่าย'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'University' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"วิทยาลัย",
+					"สถาบันการศึกษา",
+					"สถานศึกษาขั้นสูง",
+					"มหาวิทยาลัย"
+				],
+				ans: "มหาวิทยาลัย",
+				explain: "ศัพท์บัญญัติของคำว่า University คือ 'มหาวิทยาลัย'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Guide' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"มัคคุเทศก์",
+					"ผู้นำทาง",
+					"คนนำเที่ยว",
+					"วิทยากร"
+				],
+				ans: "มัคคุเทศก์",
+				explain: "ศัพท์บัญญัติของคำว่า Guide คือ 'มัคคุเทศก์'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Keyboard' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"กล่องพิมพ์งาน",
+					"แป้นพิมพ์",
+					"กระดานกด",
+					"แผงสั่งการ"
+				],
+				ans: "แป้นพิมพ์",
+				explain: "ศัพท์บัญญัติของคำว่า Keyboard คือ 'แป้นพิมพ์'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Motorcycle' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"รถยนต์สองล้อ",
+					"รถจักรยานยนต์",
+					"รถกลขับขี่",
+					"รถจักรยานกล"
+				],
+				ans: "รถจักรยานยนต์",
+				explain: "ศัพท์บัญญัติของคำว่า Motorcycle คือ 'รถจักรยานยนต์'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Stamp' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"ตราประทับเอกสาร",
+					"ตราไปรษณีย์",
+					"ดวงตราไปรษณียากร",
+					"ตรายางไปรษณีย์"
+				],
+				ans: "ดวงตราไปรษณียากร",
+				explain: "ศัพท์บัญญัติของ Stamp (ในทางไปรษณีย์) คือ 'ดวงตราไปรษณียากร'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Lottery' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"สลากกินแบ่ง",
+					"หวยรัฐบาล",
+					"ตั๋วเสี่ยงโชค",
+					"บัตรรางวัล"
+				],
+				ans: "สลากกินแบ่ง",
+				explain: "ศัพท์บัญญัติของคำว่า Lottery คือ 'สลากกินแบ่ง'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Printer' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+				options: [
+					"เครื่องถอดรหัส",
+					"เครื่องอัดสำเนา",
+					"เครื่องพิมพ์",
+					"แท่นพิมพ์เอกสาร"
+				],
+				ans: "เครื่องพิมพ์",
+				explain: "ศัพท์บัญญัติของคำว่า Printer คือ 'เครื่องพิมพ์'"
+			},
+			{
+				q: "คำภาษาอังกฤษว่า 'Email' (Electronic mail) มีศัพท์บัญญัติในภาษาไทยว่าอย่างไร",
+				options: [
+					"จดหมายสายฟ้า",
+					"ไปรษณีย์อิเล็กทรอนิกส์",
+					"สารอิเล็กทรอนิกส์",
+					"ข้อความออนไลน์"
+				],
+				ans: "ไปรษณีย์อิเล็กทรอนิกส์",
+				explain: "ศัพท์บัญญัติของ Email คือ 'ไปรษณีย์อิเล็กทรอนิกส์'"
+			},
+
+			// --- หมวดที่ 3: ศัพท์วิชาการและความรู้ทั่วไป ---
+			{
+				q: "ข้อใดให้ความหมายของ 'ศัพท์วิชาการ' ได้ถูกต้องที่สุด",
+				options: [
+					"คำที่ใช้สื่อสารทั่วไปในชีวิตประจำวันของคนทุกกลุ่ม",
+					"คำศัพท์ที่มีความหมายเฉพาะเจาะจงใช้ในสาขาวิชาชีพหรือศาสตร์แขนงต่างๆ",
+					"คำที่ยืมมาจากภาษาต่างประเทศโดยไม่มีการเปลี่ยนแปลงรูปคำ",
+					"คำที่แต่งขึ้นใหม่เพื่อใช้ในวรรณคดีและร้อยกรองเท่านั้น"
+				],
+				ans: "คำศัพท์ที่มีความหมายเฉพาะเจาะจงใช้ในสาขาวิชาชีพหรือศาสตร์แขนงต่างๆ",
+				explain: "ศัพท์วิชาการ คือ คำศัพท์ที่ใช้สื่อสารเฉพาะในวงการวิชาการหรือศาสตร์แขนงต่างๆ เช่น วิทยาศาสตร์ แพทยศาสตร์ กฎหมาย เศรษฐศาสตร์"
+			},
+			{
+				q: "คำว่า 'Application' ในทางคอมพิวเตอร์และเทคโนโลยี มีศัพท์บัญญัติว่าอย่างไร",
+				options: [
+					"โปรแกรมประยุกต์",
+					"ระบบปฏิบัติการ",
+					"โปรแกรมสำเร็จรูป",
+					"ชุดสั่งการส่วนหน้า"
+				],
+				ans: "โปรแกรมประยุกต์",
+				explain: "ศัพท์บัญญัติของ Application คือ 'โปรแกรมประยุกต์' (หรือแอปพลิเคชัน)"
+			},
+			{
+				q: "ข้อใดเป็นการสะกดคำทับศัพท์คำว่า 'Lipstick' ได้ถูกต้อง",
+				options: [
+					"ลิปสติก",
+					"ลิปสติ๊ก",
+					"ลิปสติกส์",
+					"ลิปสติค"
+				],
+				ans: "ลิปสติก",
+				explain: "คำว่า Lipstick เขียนทับศัพท์ภาษาไทยเป็น 'ลิปสติก'"
+			},
+			// --- หมวดที่ 1: การสะกดคำทับศัพท์ที่มักเขียนผิดบ่อย ---
+				{
+					q: "คำว่า 'Strawberry' เมื่อเขียนเป็นคำทับศัพท์ภาษาไทยที่ถูกต้องคือข้อใด",
+					options: [
+						"สตรอเบอร์รี่",
+						"สตรอว์เบอร์รี",
+						"สตรอเบอร์รี",
+						"สตรอว์เบอร์รี่"
+					],
+					ans: "สตรอว์เบอร์รี",
+					explain: "ตามหลักเกณฑ์การทับศัพท์ของราชบัณฑิตยสภา Straw ถอดเป็น 'สตรอว์' และ berry ถอดเป็น 'เบอร์รี' (ไม่เติมไม้เอก)"
+				},
+				{
+					q: "คำว่า 'Notebook' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+					options: [
+						"โน้ตบุ๊ก",
+						"โน๊ตบุ๊ค",
+						"โน้ตบุ๊ค",
+						"โน๊ตบุ๊ก"
+					],
+					ans: "โน้ตบุ๊ก",
+					explain: "คำว่า Note ใช้ไม้โท (โน้ต) และ book ซึ่งมี k เป็นตัวสะกดถอดเป็น ก ไก่ (บุ๊ก) จึงสะกดว่า 'โน้ตบุ๊ก'"
+				},
+				{
+					q: "คำว่า 'Cake' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+					options: [
+						"เค้ก",
+						"เค็ก",
+						"เค็กส์",
+						"เคก"
+					],
+					ans: "เค้ก",
+					explain: "คำว่า Cake ในภาษาไทยใช้รูปวรรณยุกต์โทเป็น 'เค้ก'"
+				},
+				{
+					q: "คำว่า 'Lotion' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+					options: [
+						"โลชั่น",
+						"โลชัน",
+						"โลชิ่ง",
+						"โลชั่ง"
+					],
+					ans: "โลชั่น",
+					explain: "คำว่า Lotion เขียนทับศัพท์ภาษาไทยโดยใช้ ไม้เอก บน ช ช้าง เป็น 'โลชั่น'"
+				},
+				{
+					q: "คำว่า 'Quota' เขียนทับศัพท์ภาษาไทยได้ถูกต้องตามข้อใด",
+					options: [
+						"โควต้า",
+						"โควตา",
+						"โค้วต้า",
+						"โควต่า"
+					],
+					ans: "โควตา",
+					explain: "คำว่า Quota ตามหลักการทับศัพท์ราชบัณฑิตยสภาสะกดว่า 'โควตา' โดยไม่ใส่รูปวรรณยุกต์"
+				},
+
+				// --- หมวดที่ 2: การสร้างศัพท์บัญญัติและการจับคู่ ---
+				{
+					q: "คำว่า 'Telephone' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+					options: [
+						"สายด่วน",
+						"โทรสาร",
+						"โทรศัพท์",
+						"โทรเลข"
+					],
+					ans: "โทรศัพท์",
+					explain: "ศัพท์บัญญัติของ Telephone คือ 'โทรศัพท์' (เกิดจากการผสมคำว่า โทร + ศัพท์)"
+				},
+				{
+					q: "คำว่า 'SMS' (Short Message Service) มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+					options: [
+						"บริการสารสั้น",
+						"บริการส่งข้อความสั้น",
+						"ข้อความด่วน",
+						"ไปรษณีย์ข้อความ"
+					],
+					ans: "บริการส่งข้อความสั้น",
+					explain: "ศัพท์บัญญัติของ SMS คือ 'บริการส่งข้อความสั้น'"
+				},
+				{
+					q: "คำว่า 'System' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+					options: [
+						"ระเบียบ",
+						"กลไก",
+						"ระบบ",
+						"เครือข่าย"
+					],
+					ans: "ระบบ",
+					explain: "ศัพท์บัญญัติของคำว่า System คือ 'ระบบ'"
+				},
+				{
+					q: "คำว่า 'Percent' มีศัพท์บัญญัติในภาษาไทยตรงกับข้อใด",
+					options: [
+						"ร้อยละ",
+						"ส่วนสิบ",
+						"อัตราส่วน",
+						"เศษส่วน"
+					],
+					ans: "ร้อยละ",
+					explain: "ศัพท์บัญญัติของ Percent คือ 'ร้อยละ' (หรือใช้คำทับศัพท์ว่า เปอร์เซ็นต์)"
+				},
+				{
+					q: "คำว่า 'Party' มีศัพท์บัญญัติหรือคำแปลที่ใช้ในภาษาไทยตรงกับข้อใด",
+					options: [
+						"การชุมนุม",
+						"งานเลี้ยง",
+						"พิธีการ",
+						"การสังสรรค์"
+					],
+					ans: "งานเลี้ยง",
+					explain: "คำว่า Party ในบริบทกิจกรรมสังสรรค์ แปล/บัญญัติความหมายว่า 'งานเลี้ยง'"
+				},
+
+				// --- หมวดที่ 3: ศัพท์วิชาการตามสาขาวิชา ---
+				{
+					q: "คำว่า 'อุปสงค์ - อุปทาน' จัดเป็นศัพท์วิชาการในสาขาวิชาใด",
+					options: [
+						"รัฐศาสตร์",
+						"เศรษฐศาสตร์",
+						"สังคมวิทยา",
+						"นิติศาสตร์"
+					],
+					ans: "เศรษฐศาสตร์",
+					explain: "อุปสงค์ (Demand) และ อุปทาน (Supply) เป็นศัพท์วิชาการเฉพาะในสาขาเศรษฐศาสตร์"
+				},
+				{
+					q: "คำว่า 'สัจนิยม' หรือ 'วรรณรูป' จัดเป็นศัพท์วิชาการในสาขาใด",
+					options: [
+						"วรรณกรรม / วรรณคดี",
+						"วิทยาศาสตร์",
+						"แพทยศาสตร์",
+						"รัฐศาสตร์"
+					],
+					ans: "วรรณกรรม / วรรณคดี",
+					explain: "เป็นศัพท์เฉพาะที่ใช้ในการวิเคราะห์และวิจารณ์วรรณกรรม"
+				},
+				{
+					q: "คำว่า 'พจนานุกรม', 'หน่วยเสียง', 'ไวยากรณ์' จัดเป็นศัพท์วิชาการในสาขาใด",
+					options: [
+						"นิเทศศาสตร์",
+						"ภาษาศาสตร์",
+						"ประวัติศาสตร์",
+						"ปรัชญา"
+					],
+					ans: "ภาษาศาสตร์",
+					explain: "เป็นคำศัพท์เฉพาะที่ใช้ศึกษาโครงสร้างและระบบของภาษาในสาขาภาษาศาสตร์"
+				},
+				{
+					q: "คำว่า 'โจทย์', 'สมการ', 'เรขาคณิต' จัดเป็นศัพท์วิชาการในสาขาใด",
+					options: [
+						"คณิตศาสตร์",
+						"วิทยาศาสตร์",
+						"บัญชี",
+						"สถิติ"
+					],
+					ans: "คณิตศาสตร์",
+					explain: "เป็นศัพท์วิชาการพื้นฐานที่ใช้ในศาสตร์คำนวณและคณิตศาสตร์"
+				},
+				{
+					q: "คำว่า 'โจทย์', 'จำเลย', 'นิติกรรม' (คำว่า โจทย์ ในบริบทกฎหมาย) จัดเป็นศัพท์วิชาการในสาขาใด",
+					options: [
+						"รัฐศาสตร์",
+						"กฎหมาย / นิติศาสตร์",
+						"สังคมสงเคราะห์",
+						"บริหารธุรกิจ"
+					],
+					ans: "กฎหมาย / นิติศาสตร์",
+					explain: "เป็นศัพท์วิชาการเฉพาะทางที่ใช้ในกระบวนการยุติธรรมและนิติศาสตร์"
+				}
+		]
+	},
+    thai_m3_3: {
+		title: "ภาษาไทย ม.3 - การเขียนอธิบาย และอิศรญาณภาษิต (ฉบับสมบูรณ์)",
+		icon: "📖",
+		desc: "แบบฝึกทักษะเรื่องกลวิธีการเขียนอธิบาย และการวิเคราะห์คุณค่า ถอดบทเรียนจากอิศรญาณภาษิต วิชาภาษาไทย ม.3",
+		questions: [
+			// --- หมวดที่ 1: กลวิธีการเขียนอธิบาย ---
+			{
+				q: "ข้อใดคือลักษณะสำคัญที่สุดของการ 'เขียนอธิบาย'",
+				options: [
+					"เน้นเล่าเรื่องเหตุการณ์เรียงตามลำดับเวลาเหมือนนิทาน",
+					"เน้นให้ความรู้ ข้อเท็จจริง และความเข้าใจที่กระจ่างชัด",
+					"เน้นการใช้คำพรรณนาโวหารให้ผู้อ่านเห็นภาพและเกิดอารมณ์สะเทือนใจ",
+					"เน้นแสดงความคิดเห็นส่วนตัวโน้มน้าวใจให้คนคล้อยตาม"
+				],
+				ans: "เน้นให้ความรู้ ข้อเท็จจริง และความเข้าใจที่กระจ่างชัด",
+				explain: "จุดประสงค์หลักของการเขียนอธิบายคือการถ่ายทอดเนื้อหา ข้อเท็จจริง หรือขั้นตอนเพื่อให้ผู้อ่านเกิดความรู้และความเข้าใจที่ถูกต้อง"
+			},
+			{
+				q: "หากนักเรียนต้องการเขียนอธิบาย 'ขั้นตอนการทำไข่เจียวหมูสับ' ควรใช้วิธีการอธิบายแบบใดจึงจะเหมาะสมที่สุด",
+				options: [
+					"อธิบายตามลำดับขั้นตอน",
+					"อธิบายด้วยการยกตัวอย่างเปรียบเทียบ",
+					"อธิบายด้วยการให้คำจำกัดความ",
+					"อธิบายด้วยการวิเคราะห์สาเหตุและผลที่ตามมา"
+				],
+				ans: "อธิบายตามลำดับขั้นตอน",
+				explain: "การอธิบายกระบวนการ วิธีทำ หรือขั้นตอนการปฏิบัติงาน ควรเรียงลำดับขั้นตอนก่อน-หลังเพื่อให้ปฏิบัติตามได้ถูกต้อง"
+			},
+			{
+				q: "ข้อความใดจัดเป็นการเขียนอธิบายประเภท 'แสดงสาเหตุและผลลัพธ์'",
+				options: [
+					"วิธีการพับถุงกระดาษทำได้ง่ายๆ โดยเริ่มจากตัดกระดาษให้เป็นสี่เหลี่ยมผืนผ้า",
+					"ปลากัดเป็นปลาพื้นเมืองของไทย มีครีบและหางหลากสีสันสวยงาม",
+					"ฝนที่ตกหนักติดต่อกันหลายวันในพื้นที่ลาดเชิงเขา ทำให้เกิดดินถล่มและน้ำป่าไหลหลาก",
+					"พจนานุกรมคือหนังสือรวบรวมคำศัพท์ในภาษาที่มีการให้ความหมายไว้"
+				],
+				ans: "ฝนที่ตกหนักติดต่อกันหลายวันในพื้นที่ลาดเชิงเขา ทำให้เกิดดินถล่มและน้ำป่าไหลหลาก",
+				explain: "ข้อความนี้ชี้ให้เห็น 'สาเหตุ' (ฝนตกหนักติดต่อกัน) นำไปสู่ 'ผลลัพธ์' (เกิดดินถล่มและน้ำป่าไหลหลาก)"
+			},
+			{
+				q: "ข้อใดไม่ใช่แนวปฏิบัติที่ดีในการเขียนอธิบาย",
+				options: [
+					"ใช้ภาษาที่กะทัดรัด ชัดเจน และตรงไปตรงมา",
+					"เรียงลำดับความคิดอย่างเป็นระบบและมีเหตุผลรองรับ",
+					"ใช้คำฟุ่มเฟือยและคำราชาศัพท์ที่ไม่จำเป็นเพื่อให้งานเขียนดูยาวขึ้น",
+					"ตรวจสอบความถูกต้องของข้อมูลก่อนนำเสนอ"
+				],
+				ans: "ใช้คำฟุ่มเฟือยและคำราชาศัพท์ที่ไม่จำเป็นเพื่อให้งานเขียนดูยาวขึ้น",
+				explain: "การเขียนอธิบายที่ดีต้องกระชับ ตรงประเด็น ไม่ใช้คำฟุ่มเฟือยหรือคำที่ไม่จำเป็นเพราะจะทำให้ผู้อ่านสับสน"
+			},
+			{
+				q: "ข้อความใดมีการใช้วิธีการเขียนอธิบาย",
+				options: [
+					"\"ดวงอาทิตย์อัสดงสาดแสงสีทองอร่ามจับขอบฟ้า ท้องทะเลระยิบระยับดั่งโรยด้วยผงเพชร\"",
+					"\"การเกิดกลางวันและกลางคืนเกิดจากการที่โลกหมุนรอบตัวเองครบ 1 รอบใช้เวลา 24 ชั่วโมง\"",
+					"\"ท่านผู้ชมครับ สินค้าชิ้นนี้ยอดเยี่ยมที่สุดในสามโลก ซื้อตอนนี้แถมฟรีทันทีสองชิ้น!\"",
+					"\"กาลครั้งหนึ่งนานมาแล้ว มีพระราชาผู้ทรงทศพิธราชธรรมปกครองเมืองอันร่มเย็น\""
+				],
+				ans: "\"การเกิดกลางวันและกลางคืนเกิดจากการที่โลกหมุนรอบตัวเองครบ 1 รอบใช้เวลา 24 ชั่วโมง\"",
+				explain: "ข้อนี้เป็นการให้ความรู้ความเข้าใจทางวิทยาศาสตร์อย่างตรงไปตรงมา ส่วนข้ออื่นเป็นพรรณนา โน้มน้าวใจ หรือเล่าเรื่อง"
+			},
+			{
+				q: "ข้อใดคือการอธิบายแบบ 'ให้คำจำกัดความ' หรือ 'นิยาม' ที่ถูกต้องที่สุด",
+				options: [
+					"ความกตัญญูเป็นเครื่องหมายของคนดี ซึ่งหาได้ยากยิ่งในสังคมปัจจุบัน",
+					"วาฬคือสัตว์เลี้ยงลูกด้วยนมชนิดหนึ่ง อาศัยอยู่ในทะเล มีขนาดร่างกายใหญ่ที่สุดในโลก",
+					"หากคุณต้องการมีความสุข ลองเริ่มจากการยิ้มให้ตัวเองในกระจกทุกเช้า",
+					"คอมพิวเตอร์ประกอบด้วย ฮาร์ดแวร์ ซอฟต์แวร์ และบุคลากรที่ใช้งาน"
+				],
+				ans: "วาฬคือสัตว์เลี้ยงลูกด้วยนมชนิดหนึ่ง อาศัยอยู่ในทะเล มีขนาดร่างกายใหญ่ที่สุดในโลก",
+				explain: "การให้คำนิยามมักใช้คำว่า 'คือ' หรือ 'หมายถึง' เพื่อระบุความหมาย ขอบเขต หรือคุณลักษณะเฉพาะของสิ่งนั้นๆ"
+			},
+			{
+				q: "\"การนำสิ่งสองสิ่งที่มีลักษณะร่วมกันหรือคล้ายกัน มากล่าวคู่กันเพื่ออธิบายข้อเท็จจริงอย่างใดอย่างหนึ่งให้เข้าใจง่ายขึ้น\" ตรงกับกลวิธีการเขียนอธิบายแบบใด",
+				options: [
+					"การอธิบายโดยใช้ตัวอย่าง",
+					"การอธิบายโดยใช้วิธีเปรียบเทียบ",
+					"การอธิบายโดยชี้นำแนวทาง",
+					"การอธิบายโดยแยกแยะองค์ประกอบ"
+				],
+				ans: "การอธิบายโดยใช้วิธีเปรียบเทียบ",
+				explain: "การเทียบเคียงสิ่งที่คล้ายกันหรือต่างกันเพื่อให้อ่านแล้วเห็นภาพชัดเจนขึ้น คือการอธิบายโดยใช้วิธีเปรียบเทียบ"
+			},
+			{
+				q: "ข้อความในข้อใดใช้วิธีการเขียนอธิบายโดย 'การยกตัวอย่าง'",
+				options: [
+					"สมุนไพรไทยหลายชนิดมีฤทธิ์บรรเทาอาการไข้หวัด เช่น ฟ้าทะลายโจร ขิง และกระชาย",
+					"การเขียนโครงงานมี 5 บท ได้แก่ บทนำ เอกสารที่เกี่ยวข้อง วิธีดำเนินงาน ผลการศึกษา และสรุปผล",
+					"โลกร้อนเกิดจากก๊าซเรือนกระจกที่กักเก็บความร้อนไว้ในชั้นบรรยากาศ",
+					"กรุณาถอดรองเท้าก่อนเข้าห้องสมุดทุกครั้งเพื่อความเป็นระเบียบเรียบร้อย"
+				],
+				ans: "สมุนไพรไทยหลายชนิดมีฤทธิ์บรรเทาอาการไข้หวัด เช่น ฟ้าทะลายโจร ขิง และกระชาย",
+				explain: "มีคำเชื่อมชี้แจง 'เช่น' ซึ่งตามด้วยรายชื่อสมุนไพรตัวอย่างเพื่อขยายความประโยคหลัก"
+			},
+			{
+				q: "ถ้านักเรียนต้องเขียนอธิบายเรื่อง 'ประเภทของขยะในชุมชนและการคัดแยก' ควรใช้วิธีการอธิบายในรูปแบบใดจึงจะสื่อสารได้ชัดเจนที่สุด",
+				options: [
+					"การให้คำนิยามและการใช้โวหารภาพพจน์",
+					"การอธิบายตามลำดับเวลาและการเล่าเหตุการณ์",
+					"การแยกแยะองค์ประกอบ (การจัดกลุ่มประเภท) และการยกตัวอย่าง",
+					"การเปรียบเทียบข้อดีข้อเสียและการโน้มน้าวใจ"
+				],
+				ans: "การแยกแยะองค์ประกอบ (การจัดกลุ่มประเภท) และการยกตัวอย่าง",
+				explain: "การอธิบายเรื่องขยะและการคัดแยกจำแนกได้ดีที่สุดโดยการแยกแยะประเภท (เช่น ขยะเปียก รีไซเคิล อันตราย) ร่วมกับการยกตัวอย่างสิ่งของประกอบ"
+			},
+			{
+				q: "พิจารณาข้อความ: \"การล้างมือที่ถูกต้องช่วยป้องกันเชื้อโรคได้ โดยเริ่มจากฟอกสบู่ฝ่ามือ ถูหลังมือ ซอกนิ้ว หัวแม่มือ ข้อมือ แล้วล้างออกด้วยน้ำสะอาด\" ข้อความนี้โดดเด่นด้วยองค์ประกอบใดของการเขียนอธิบาย",
+				options: [
+					"ความเป็นเหตุเป็นผลและความเป็นระเบียบตามขั้นตอน",
+					"ความซาบซึ้งใจและจินตนาการที่ลึกซึ้ง",
+					"การชักจูงใจและการเร้าอารมณ์ให้ทำตาม",
+					"การแสดงความคิดเห็นเชิงวิพากษ์วิจารณ์"
+				],
+				ans: "ความเป็นเหตุเป็นผลและความเป็นระเบียบตามขั้นตอน",
+				explain: "ข้อความบอกเหตุผลของประโยชน์การล้างมือ และระบุลำดับขั้นตอนการล้างมืออย่างชัดเจนตามลำดับ"
+			},
+
+			// --- หมวดที่ 2: อิศรญาณภาษิต (ข้อสอบท้ายเอกสาร) ---
+			{
+				q: "“ผู้ใดดีดีต่ออย่าก่อกิจ  ผู้ใดผิดผ่อนพักอย่าหักหาญ” ข้อความนี้ตรงกับสำนวนไทยในข้อใด",
+				options: [
+					"คนล้มอย่าข้าม",
+					"ตกน้ำไม่ไหล ตกไฟไม่ไหม้",
+					"ขุดรากถอนโคน",
+					"เด็ดบัวไม่ไว้ใย"
+				],
+				ans: "คนล้มอย่าข้าม",
+				explain: "คำสอนสอนให้รู้จักให้อภัย ไม่ซ้ำเติมผู้ที่ทำผิดพลาด ตรงกับสำนวน 'คนล้มอย่าข้าม'"
+			},
+			{
+				q: "“เพชรอย่างดีมีค่าราคายิ่ง  ส่งให้ลิงจะรู้ค่าราคาหรือ” ข้อความนี้ 'ไม่สอดคล้อง' กับสำนวนไทยในข้อใด",
+				options: [
+					"ไก่ได้พลอย",
+					"วานรได้แก้ว",
+					"ตาบอดได้แว่น",
+					"กิ้งก่าได้ทอง"
+				],
+				ans: "กิ้งก่าได้ทอง",
+				explain: "ไก่ได้พลอย, วานรได้แก้ว, ตาบอดได้แว่น หมายถึงการได้ของมีค่าแต่ไม่รู้คุณค่า ส่วน 'กิ้งก่าได้ทอง' หมายถึง ได้ดีแล้วเย่อหยิ่งพองขน"
+			},
+			{
+				q: "พิจารณาบทประพันธ์:\n“แต่ไม้ไผ่อันหนึ่งตันอันหนึ่งแขวะ  สีแหยะแหยะตอกตะบันเป็นควันฉิว\nช้างถีบอย่าว่าเล่นกระเด็นปลิว  แรงหรือหิวช่างใจดูจะสู้ช้าง”\nแนวคิดสำคัญที่ปรากฏในบทประพันธ์ข้างต้นคือข้อใด",
+				options: [
+					"ความขยันหมั่นเพียรและความรอบคอบ",
+					"ความไม่ประมาทและประมาณกำลังตนเอง",
+					"ความไม่ประมาทและความเพียร",
+					"การใช้ปัญญาและการใช้สติในการแก้ปัญหา"
+				],
+				ans: "ความไม่ประมาทและประมาณกำลังตนเอง",
+				explain: "บทประพันธ์สอนเรื่องการประเมินกำลังของตนเอง ไม่ประมาทคู่ต่อสู้หรือสิ่งที่มีกำลังเหนือกว่า (จะสู้ช้างต้องช่างใจดู)"
+			},
+			{
+				q: "ในสังคมที่มีความแตกแยกในปัจจุบัน นักเรียนคิดว่าคำสอนในข้อใดนำมาปรับใช้ได้ดีที่สุด",
+				options: [
+					"เราก็จิตคิดดูเล่าเขาก็ใจ  รักกันไว้ดีกว่าชังระวังการ",
+					"รักสั้นนั้นให้รู้อยู่เพียงสั้น  รักยาวนั้นอย่าให้เย็นเกินกฎหมาย",
+					"ล้องูเห่าเล่นก็ได้ใจกล้ากล้า  แต่ว่าอย่ายักเยื้องเข้าเบื้องหาง",
+					"หญิงเรียกแม่ชายเรียกพ่อยอไว้ใช้  มันชอบใจข้างปลอบไม่ชอบดุ"
+				],
+				ans: "เราก็จิตคิดดูเล่าเขาก็ใจ  รักกันไว้ดีกว่าชังระวังการ",
+				explain: "สอนให้มีความเอาใจเขามาใส่ใจเรา เห็นอกเห็นใจกัน และปรองดองรักใคร่กันดีกว่าโกรธเกลียดกัน"
+			},
+			{
+				q: "“จะเรียนคมเรียนเถิดอย่าเปิดฝัก  ถึงรู้จริงนิ่งไว้อย่าไขรู้” บทประพันธ์นี้ให้คำสอนในเรื่องใด",
+				options: [
+					"สอนให้ซ่อนความรู้ไว้ไม่แบ่งปันใคร",
+					"สอนให้มีความรู้แต่ให้อ่อนน้อมถ่อมตน ไม่อวดรู้",
+					"สอนให้ขยันอ่านหนังสือเฉพาะเวลาใกล้สอบ",
+					"สอนให้เก็บดาบไว้ในฝักเสมอเพื่อความปลอดภัย"
+				],
+				ans: "สอนให้มีความรู้แต่ให้อ่อนน้อมถ่อมตน ไม่อวดรู้",
+				explain: "เปรียบปัญญาความรู้เหมือนความคมของดาบ ให้แสวงหาความรู้แต่ถ่อมตนไว้ ไม่โอ้อวดตัว"
+			},
+			{
+				q: "“เดินตามรอยผู้ใหญ่หมาไม่กัด” คำสอนนี้มุ่งเน้นให้ผู้เรียนปฏิบัติตนอย่างไร",
+				options: [
+					"ให้เดินตามหลังผู้ใหญ่เสมอเวลามีสุนัขดุ",
+					"ให้ปฏิบัติตามคำสั่งและประสบการณ์ของผู้ใหญ่ที่มีมาก่อนเพื่อความปลอดภัย",
+					"ให้เชื่อฟังผู้ใหญ่เฉพาะเรื่องการทำมาหากิน",
+					"ให้อยู่ใกล้ชิดผู้ใหญ่เพื่อจะได้รับการปกป้องคุ้มครอง"
+				],
+				ans: "ให้ปฏิบัติตามคำสั่งและประสบการณ์ของผู้ใหญ่ที่มีมาก่อนเพื่อความปลอดภัย",
+				explain: "เป็นการเปรียบเปรยว่าการเชื่อฟังและปฏิบัติตามแบบอย่างหรือคำสอนของผู้มีประสบการณ์มาก่อนจะช่วยให้รอดพ้นจากอันตราย"
+			}
+		]
+	},
+	eng_m3_1: {
+		title: "ภาษาอังกฤษ ม.3 - เก็งข้อสอบปลายภาค (Grammar: Part 1)",
+		icon: "📝",
+		desc: "แบบฝึกหัดเจาะลึก Future Forms, Conditionals (Type 1-3) และ Wish/If only จากเอกสารติว ม.3",
+		questions: [
+			// --- 1. Future Forms (will / be going to / Present Continuous) ---
+			{
+				q: "\"What's on TV tonight?\" - \"I don't know, I ________ (look) at the guide.\"",
+				options: ["will look", "am going to look", "am looking", "looked"],
+				ans: "will look",
+				explain: "ใช้ 'will' เมื่อเป็นการตัดสินใจทำทันทีในขณะที่พูด (instant decision)"
+			},
+			{
+				q: "David ________ (leave) for Madrid tomorrow morning. (มีกำหนดการแน่นอนแล้ว)",
+				options: ["will leave", "leaves", "is leaving", "is going to leave"],
+				ans: "is leaving",
+				explain: "ใช้ Present Continuous (is/am/are + V.ing) เมื่อมีการจัดเตรียมและนัดหมายแน่นอนแล้ว (arrangements)"
+			},
+			{
+				q: "Look at those dark clouds! It ________ (rain) very soon.",
+				options: ["will rain", "is going to rain", "is raining", "rains"],
+				ans: "is going to rain",
+				explain: "ใช้ 'be going to' เมื่อทำนายโดยมีหลักฐานให้เห็นชัดเจนในปัจจุบัน (dark clouds)"
+			},
+			{
+				q: "\"I can't do this exercise!\" - \"OK, I ________ (help) you.\"",
+				options: ["will help", "am going to help", "am helping", "helped"],
+				ans: "will help",
+				explain: "ใช้ 'will' ในการอาสาช่วยเหลือ (offer/promise)"
+			},
+			{
+				q: "\"It's raining heavily.\" - \"I ________ (take) my umbrella.\"",
+				options: ["will take", "am going to take", "am taking", "took"],
+				ans: "will take",
+				explain: "การตัดสินใจทันที ณ ตอนที่พูดใช้ 'will'"
+			},
+			{
+				q: "________ (people/fly) in special cars in the future?",
+				options: ["Will people fly", "Are people going to fly", "Are people flying", "Do people fly"],
+				ans: "Will people fly",
+				explain: "ใช้ 'Will' สำหรับการคาดเดาเหตุการณ์ลอยๆ ในอนาคต (predictions)"
+			},
+			{
+				q: "I think Steve ________ (win) the race.",
+				options: ["will win", "is going to win", "is winning", "wins"],
+				ans: "will win",
+				explain: "ความเห็นส่วนตัว/ความคิดคาดเดา (ขึ้นต้นด้วย I think) ใช้ 'will'"
+			},
+			{
+				q: "I ________ (meet) Mary tonight at 8:00 p.m. Would you like to come?",
+				options: ["am meeting", "will meet", "meet", "met"],
+				ans: "am meeting",
+				explain: "นัดหมายระบุเวลาชัดเจนในอนาคตอันใกล้ใช้ Present Continuous"
+			},
+			{
+				q: "Tonya ________ (probably / be) here at 7:00 p.m.",
+				options: ["will probably be", "is probably going to be", "is probably being", "probably is"],
+				ans: "will probably be",
+				explain: "คาดคะเนอนาคตโดยใช้คำว่า probably ร่วมกับ 'will'"
+			},
+			{
+				q: "\"Why are you wearing trainers?\" - \"I ________ (play) football with Bill.\"",
+				options: ["am going to play", "will play", "play", "played"],
+				ans: "am going to play",
+				explain: "แสดงความตั้งใจ/แผนการที่คิดไว้ก่อนแล้ว (intention)"
+			},
+			{
+				q: "A: Your room is a mess! - B: Sorry, I ________ (tidy) it up now.",
+				options: ["will tidy", "am going to tidy", "am tidying", "tidied"],
+				ans: "will tidy",
+				explain: "ตัดสินใจแก้ไขสถานการณ์ทันทีใช้ 'will'"
+			},
+			{
+				q: "A: Did you go to the post office for me? - B: No, but I promise I ________ (go) this afternoon.",
+				options: ["will go", "am going to go", "am going", "go"],
+				ans: "will go",
+				explain: "การให้คำสัญญา (promise) ใช้ 'will'"
+			},
+			{
+				q: "A: It's Brian's birthday on Saturday. - B: I know. I ________ (buy) him a present on Friday.",
+				options: ["am going to buy", "will buy", "buy", "bought"],
+				ans: "am going to buy",
+				explain: "มีการวางแผนเตรียมใจไว้ก่อนแล้ว (I know...) ใช้ 'be going to'"
+			},
+
+			// --- 2. Conditional Sentences (Type 1, 2, 3) ---
+			{
+				q: "If we ________ (not get) to the shops soon, they ________ (be) closed.",
+				options: ["don't get / will be", "won't get / are", "didn't get / would be", "hadn't got / would have been"],
+				ans: "don't get / will be",
+				explain: "Conditional Type 1: If + Present Simple, Subject + will + V.inf"
+			},
+			{
+				q: "If you ________ (not be) ready by seven o'clock, I ________ (go) without you.",
+				options: ["aren't / will go", "won't be / go", "weren't / would go", "hadn't been / would have gone"],
+				ans: "aren't / will go",
+				explain: "Conditional Type 1 บอกเหตุการณ์ที่เป็นไปได้จริงในปัจจุบัน/อนาคต"
+			},
+			{
+				q: "Your exam results would be much better if you ________ (work) a bit harder.",
+				options: ["worked", "work", "had worked", "will work"],
+				ans: "worked",
+				explain: "Conditional Type 2: Main Clause เป็น 'would + V.inf' ส่วน If-clause ต้องใช้ Past Simple"
+			},
+			{
+				q: "If you moved to a new city, you ________ (make) friends really quickly.",
+				options: ["would make", "will make", "made", "would have made"],
+				ans: "would make",
+				explain: "Conditional Type 2: If + Past Simple (moved), Subject + would + V.inf"
+			},
+			{
+				q: "Homelessness wouldn't be such a big problem if the government ________ (do) more to help.",
+				options: ["did", "does", "had done", "will do"],
+				ans: "did",
+				explain: "Conditional Type 2 สมมติตรงข้ามความจริงในปัจจุบัน"
+			},
+			{
+				q: "If I ________ (be) hungry, I ________ (buy) a sandwich in the buffet car.",
+				options: ["had been / would have bought", "were / would buy", "am / will buy", "was / bought"],
+				ans: "had been / would have bought",
+				explain: "Conditional Type 3 สมมติตรงข้ามความจริงในอดีต: If + Past Perfect, Subject + would have + V.3"
+			},
+			{
+				q: "If we ________ (stop) at the filling station, we ________ (not run out) of petrol.",
+				options: ["had stopped / wouldn't have run out", "stopped / wouldn't run out", "stop / won't run out", "have stopped / wouldn't run out"],
+				ans: "had stopped / wouldn't have run out",
+				explain: "Conditional Type 3 แสดงความเสียดายเหตุการณ์ในอดีต"
+			},
+			{
+				q: "Rewrite: Our house doesn't have a big garden, so we have to play football in the park.",
+				options: [
+					"If our house had a big garden, we wouldn't have to play football in the park.",
+					"If our house has a big garden, we won't have to play football in the park.",
+					"If our house had had a big garden, we wouldn't have played football in the park.",
+					"If our house doesn't have a big garden, we have to play football in the park."
+				],
+				ans: "If our house had a big garden, we wouldn't have to play football in the park.",
+				explain: "เปลี่ยนประโยคที่เป็นจริงในปัจจุบันเป็น Conditional Type 2 เพื่อสมมติตรงข้าม"
+			},
+			{
+				q: "Rewrite: I went out in the rain and caught a cold.",
+				options: [
+					"If I hadn't gone out in the rain, I wouldn't have caught a cold.",
+					"If I didn't go out in the rain, I wouldn't catch a cold.",
+					"If I haven't gone out in the rain, I wouldn't catch a cold.",
+					"If I don't go out in the rain, I won't catch a cold."
+				],
+				ans: "If I hadn't gone out in the rain, I wouldn't have caught a cold.",
+				explain: "เปลี่ยนประโยคเหตุการณ์อดีตเป็น Conditional Type 3 เพื่อสมมติตรงข้าม"
+			},
+
+			// --- 3. Wishes / If only ---
+			{
+				q: "I don't have an umbrella and it's raining. -> I wish I ________ an umbrella.",
+				options: ["had", "have", "had had", "would have"],
+				ans: "had",
+				explain: "Wish + Past Simple (had) ใช้ปรารถนาในสิ่งที่ตรงข้ามกับความจริงในปัจจุบัน"
+			},
+			{
+				q: "It's too cold. -> I wish it ________ so cold.",
+				options: ["weren't", "isn't", "hadn't been", "won't be"],
+				ans: "weren me",
+				explain: "Wish ในปัจจุบันกริยา Be ใช้ 'were / weren't' กับทุกประธาน"
+			},
+			{
+				q: "I didn't study enough for the test. -> If only I ________ more for the test.",
+				options: ["had studied", "studied", "have studied", "would study"],
+				ans: "had studied",
+				explain: "If only + Past Perfect (had studied) ใช้ปรารถนาแก้ไขสิ่งผิดพลาดในอดีต"
+			},
+			{
+				q: "I ate a lot and then my stomach hurt. -> I wish / If only I ________ so much.",
+				options: ["hadn't eaten", "didn't eat", "don't eat", "haven't eaten"],
+				ans: "hadn't eaten",
+				explain: "ปรารถนาตรงข้ามกับความจริงในอดีตใช้ Past Perfect"
+			}
+		]
+	},
+	eng_m3_2: {
+		title: "ภาษาอังกฤษ ม.3 - เก็งข้อสอบปลายภาค (Tenses & Vocabulary: Part 2)",
+		icon: "📝",
+		desc: "แบบฝึกหัดการใช้ Tenses ผสม (Past Simple/Continuous, Present/Past Perfect) และชุดคำศัพท์ Module 4-5 จากเอกสารติว ม.3",
+		questions: [
+			// --- 1. Tenses Mixed (Past Simple, Past Continuous, Present Perfect, Past Perfect) ---
+			{
+				q: "We ________ (watch) a film when the electricity ________ (go) off.",
+				options: ["were watching / went", "watched / was going", "were watching / was going", "watched / went"],
+				ans: "were watching / went",
+				explain: "เหตุการณ์ที่กำลังทำอยู่ใช้ Past Continuous แทรกด้วย Past Simple"
+			},
+			{
+				q: "They ________ (have) lunch when their friends ________ (arrive).",
+				options: ["were having / arrived", "had / were arriving", "were having / were arriving", "had / arrived"],
+				ans: "were having / arrived",
+				explain: "กำลังกินข้าวอยู่ (Past Continuous) แล้วเพื่อนมาถึง (Past Simple)"
+			},
+			{
+				q: "Jenny ________ (wait) for me when I ________ (arrive).",
+				options: ["was waiting / arrived", "waited / was arriving", "is waiting / arrive", "had waited / arrived"],
+				ans: "was waiting / arrived",
+				explain: "เจนนี่กำลังรออยู่ก่อนแล้วในอดีต"
+			},
+			{
+				q: "How fast ________ (you/drive) when the accident ________ (happen)?",
+				options: ["were you driving / happened", "did you drive / was happening", "have you driven / happened", "do you drive / happens"],
+				ans: "were you driving / happened",
+				explain: "สอบถามความเร็วขณะที่เกิดอุบัติเหตุ"
+			},
+			{
+				q: "John isn't here. He ________ to Hong Kong. (เขายังอยู่ที่นั่น)",
+				options: ["has gone", "has been", "went", "had gone"],
+				ans: "has gone",
+				explain: "'has gone to' หมายถึง ไปแล้วยังไม่กลับมา"
+			},
+			{
+				q: "She ________ to Hong Kong twice. (เธอเคยไปมาแล้วสองครั้ง)",
+				options: ["has been", "has gone", "went", "had been"],
+				ans: "has been",
+				explain: "'has been to' หมายถึง เคยไปมาแล้วและกลับมาแล้ว"
+			},
+			{
+				q: "Pat ________ (already / leave) when we got home.",
+				options: ["had already left", "has already left", "was already leaving", "already left"],
+				ans: "had already left",
+				explain: "การกระทำที่เสร็จสิ้นก่อนอีกเหตุการณ์ในอดีตใช้ Past Perfect (had + V.3)"
+			},
+			{
+				q: "Karen ________ (drive) for two hours when her car broke down.",
+				options: ["had been driving", "drove", "was driving", "has been driving"],
+				ans: "had been driving",
+				explain: "เน้นระยะเวลาที่ขับรถต่อเนื่องก่อนที่รถจะเสียในอดีตใช้ Past Perfect Continuous"
+			},
+			{
+				q: "I remember the day you got your new phone. I ________ a shower when you phoned me.",
+				options: ["was having", "had", "am having", "have had"],
+				ans: "was having",
+				explain: "กำลังอาบน้ำอยู่ตอนที่โทรเข้ามา"
+			},
+			{
+				q: "Why ________ that thick dress? You'll get sunburnt in this boiling weather.",
+				options: ["are you wearing", "did you wear", "were you wearing", "have you worn"],
+				ans: "are you wearing",
+				explain: "ถามถึงสิ่งที่กำลังสวมใส่อยู่ ณ ปัจจุบัน"
+			},
+			{
+				q: "While I was admiring the view, someone ________ my phone from my bag.",
+				options: ["stole", "steals", "has stolen", "had stolen"],
+				ans: "stole",
+				explain: "เหตุการณ์เข้ามาขัดจังหวะขณะกำลังชมวิวใช้ Past Simple (stole)"
+			},
+			{
+				q: "I ________ this same pair of shoes for three years and they look exactly the same.",
+				options: ["have had", "have", "had", "am having"],
+				ans: "have had",
+				explain: "มีรองเท้าคู่นี้มาเป็นเวลา 3 ปีแล้วจนถึงปัจจุบันใช้ Present Perfect"
+			},
+			{
+				q: "Andy ________ for the exam since the beginning of this week.",
+				options: ["has been preparing", "prepared", "is preparing", "is going to prepare"],
+				ans: "has been preparing",
+				explain: "เตรียมตัวสอบมาตั้งแต่ต้นสัปดาห์อย่างต่อเนื่องใช้ Present Perfect Continuous"
+			},
+			{
+				q: "When I ________ the curtains, the sun ________ and the ground was wet. It ________ during the night.",
+				options: [
+					"opened / was shining / had rained",
+					"was opening / was shining / rained",
+					"opened / shone / rained",
+					"was opening / shone / rained"
+				],
+				ans: "opened / was shining / had rained",
+				explain: "เมื่อเปิดม่าน (Past Simple) แดดกำลังส่อง (Past Continuous) และฝนได้ตกไปแล้วเมื่อคืน (Past Perfect)"
+			},
+
+			// --- 2. Vocabulary (Module 4 & Module 5) ---
+			{
+				q: "You can read the ________ when you want an answer to your problems.",
+				options: ["problem pages", "horoscopes", "headlines", "editorial"],
+				ans: "problem pages",
+				explain: "problem pages = คอลัมน์ตอบปัญหาชีวิต"
+			},
+			{
+				q: "Some ________ continue for many years with the same actors.",
+				options: ["soap operas", "horoscopes", "headlines", "forecasts"],
+				ans: "soap operas",
+				explain: "soap operas = ละครโทรทัศน์ / ละครน้ำเน่า"
+			},
+			{
+				q: "The plane crash is in the ________ of all the newspapers today.",
+				options: ["headlines", "sitcoms", "editorial", "forums"],
+				ans: "headlines",
+				explain: "headlines = พาดหัวข่าว"
+			},
+			{
+				q: "Online ________ are good places to exchange ideas with people around the world.",
+				options: ["forums", "horoscopes", "forecasts", "soap operas"],
+				ans: "forums",
+				explain: "forums = เว็บบอร์ด / พื้นที่แลกเปลี่ยนความคิดเห็น"
+			},
+			{
+				q: "Friends was one of the most popular ________ in the world.",
+				options: ["sitcoms", "editorials", "problem pages", "forecasts"],
+				ans: "sitcoms",
+				explain: "sitcoms = ละครแนวตลกขบขัน"
+			},
+			{
+				q: "Jody Brown is ________ in hospital tonight after causing a scare.",
+				options: ["recovering", "rescuing", "panicking", "saving"],
+				ans: "recovering",
+				explain: "recovering = กำลังฟื้นตัว / พักฟื้น"
+			},
+			{
+				q: "When a scorpion stung her, her parents quickly came to the ________.",
+				options: ["rescue", "panic", "sign", "catch"],
+				ans: "rescue",
+				explain: "came to the rescue = เข้ามาช่วยเหลือ"
+			},
+			{
+				q: "The scorpion ran off and there was no ________ of it anywhere.",
+				options: ["sign", "rescue", "panic", "scare"],
+				ans: "sign",
+				explain: "no sign = ไม่พบร่องรอย / ไร้วี่แวว"
+			},
+			{
+				q: "It was very ________ (care) of you to go through that red light.",
+				options: ["careless", "careful", "caring", "carefully"],
+				ans: "careless",
+				explain: "careless = ประมาท / สะเพร่า"
+			},
+			{
+				q: "Most people take technology for granted, but many poor countries ________ to buy all the equipment.",
+				options: ["can't afford", "computer literate", "go online", "train people"],
+				ans: "can't afford",
+				explain: "can't afford = ไม่มีเงินพอที่จะจ่ายซื้อ"
+			},
+			{
+				q: "People need to have ________ to sites written in their own language.",
+				options: ["access", "websites", "technology", "way of thinking"],
+				ans: "access",
+				explain: "have access to = สิทธิ์หรือความสามารถในการเข้าถึงข้อมูล/เว็บไซต์"
+			}
+		]
+	}
 };
